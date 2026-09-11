@@ -49,8 +49,8 @@ nos doctor --list          # vérifications disponibles
 ```json
 {
   "tool": "nos-doctor",
-  "nos_version": "1.0.0-alpha.1",
-  "system": "Naabiga OS 1.0.0-alpha.1 (Bobo)",
+  "nos_version": "1.0.0-alpha.2",
+  "system": "Naabiga OS 1.0.0-alpha.2 (Bobo)",
   "date": "2026-09-11T10:00:00Z",
   "summary": {"ok": 14, "warn": 2, "fail": 0, "total": 16},
   "checks": [

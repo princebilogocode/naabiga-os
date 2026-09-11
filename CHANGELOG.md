@@ -5,11 +5,20 @@ Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) : Versionnage 
 
 ## [Unreleased]
 
+## [1.0.0-alpha.2] - 2026-09-11
+
 ### Added
 - `nos welcome` : assistant de premier démarrage (whiptail ou non interactif) : profils, IDE, assistants IA, diagnostic ; lancé automatiquement à la première session (`/etc/xdg/autostart/nos-welcome.desktop`).
 - `nos update --check` : compare la version installée avec la dernière version publiée (code de retour 10 si une mise à jour existe).
 - `nos info --json` pour N-OS Center.
 - Doctor : vérifications `go`, `rust`, `php`, `education` et `administration` (bloquantes seulement si le profil est appliqué).
+- Site officiel https://naabiga.com référencé partout (README, aide, motd, os-release, installateur, rapport Doctor).
+- Contrôle de style `scripts/check-style.sh` (pas de tirets cadratins) dans `make lint` et la CI.
+- Labels, jalons (Alpha, Beta, RC, 1.0 LTS) et 16 issues de roadmap sur GitHub, dont des missions étudiantes.
+
+### Changed
+- Positionnement : N-OS est le premier système d'exploitation conçu par des Burkinabè, pour les Burkinabè et pour l'Afrique ; plus aucune mention publique du socle.
+- Textes sans tirets cadratins ni demi-cadratins.
 
 ## [1.0.0-alpha.1] - 2026-09-11
 
@@ -33,5 +42,6 @@ Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) : Versionnage 
 - CI GitHub Actions : lint (shellcheck), tests (bats), build docs, build paquets, build ISO manuel.
 - Tests bats pour la CLI et Doctor.
 
-[Unreleased]: https://github.com/princebilogocode/naabiga-os/compare/v1.0.0-alpha.1...HEAD
+[Unreleased]: https://github.com/princebilogocode/naabiga-os/compare/v1.0.0-alpha.2...HEAD
+[1.0.0-alpha.2]: https://github.com/princebilogocode/naabiga-os/compare/v1.0.0-alpha.1...v1.0.0-alpha.2
 [1.0.0-alpha.1]: https://github.com/princebilogocode/naabiga-os/releases/tag/v1.0.0-alpha.1

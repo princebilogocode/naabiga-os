@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/badge/Made%20in-Burkina%20Faso-D62828" alt="Made in Burkina Faso">
   <img src="https://img.shields.io/badge/support-LTS-198754" alt="Support LTS">
   <img src="https://img.shields.io/badge/bureau-Cinnamon-D4AF37" alt="Cinnamon">
-  <img src="https://img.shields.io/badge/version-1.0.0--alpha.1-198754" alt="Version">
+  <img src="https://img.shields.io/badge/version-1.0.0--alpha.2-198754" alt="Version">
 </p>
 
 <p align="center">
