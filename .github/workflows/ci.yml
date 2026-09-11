@@ -64,7 +64,7 @@ jobs:
             nos doctor --json --no-fail | head -c 400
             nos install --list | head -20
           '
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: packages
           path: build/out/packages/*.deb
