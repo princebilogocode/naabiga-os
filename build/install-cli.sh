@@ -57,12 +57,15 @@ _nos() {
   cur="${COMP_WORDS[COMP_CWORD]}"
   prev="${COMP_WORDS[COMP_CWORD-1]}"
   case "$prev" in
-    nos) COMPREPLY=($(compgen -W "doctor install remove update repair sdk ai profile info config version help" -- "$cur")) ;;
+    nos) COMPREPLY=($(compgen -W "doctor install remove update repair sdk ai profile welcome info config version help" -- "$cur")) ;;
     doctor) COMPREPLY=($(compgen -W "--repair --json --export --check --list --no-fail" -- "$cur")) ;;
     sdk) COMPREPLY=($(compgen -W "list install use remove current env dir" -- "$cur")) ;;
     ai) COMPREPLY=($(compgen -W "list install remove status update" -- "$cur")) ;;
     config) COMPREPLY=($(compgen -W "get set list path" -- "$cur")) ;;
     profile) COMPREPLY=($(compgen -W "list show apply dev bureautique education administration all" -- "$cur")) ;;
+    welcome) COMPREPLY=($(compgen -W "--yes --profile --ide --ai --no-doctor --force --reset" -- "$cur")) ;;
+    update) COMPREPLY=($(compgen -W "--system --sdk --ai --check --all" -- "$cur")) ;;
+    info) COMPREPLY=($(compgen -W "--json" -- "$cur")) ;;
     install|remove)
       local catalog="${NOS_CATALOG:-/usr/share/nos/catalog.tsv}"
       [ -f "$catalog" ] && COMPREPLY=($(compgen -W "$(grep -v '^#' "$catalog" | cut -f1 | tr '\n' ' ')" -- "$cur")) ;;

@@ -70,7 +70,9 @@ nos install flutter   # Installer un outil du catalogue
 nos sdk list          # Lister les SDK et versions
 nos ai install claude # Installer un assistant IA
 nos profile apply education  # Poste d'enseignement supérieur (LaTeX, Jupyter, R, salle de TP)
+nos welcome           # Assistant de premier démarrage (profils, IDE, IA)
 nos update            # Mettre à jour le système et les outils N-OS
+nos update --check    # Une nouvelle version de N-OS est-elle disponible ?
 nos info              # Informations système
 ```
 

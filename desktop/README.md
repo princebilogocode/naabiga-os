@@ -5,7 +5,7 @@ Ce dossier contient tout ce qui définit l'expérience de bureau de Naabiga OS (
 | Dossier | Contenu | Installé dans |
 |---|---|---|
 | `dconf/` | Réglages Cinnamon par défaut (thème, panneau, favoris, raccourcis, terminal) | `/etc/dconf/db/local.d/`, `/etc/dconf/profile/user` |
-| `cinnamon/` | LightDM + Slick Greeter (écran de connexion), lanceurs `.desktop` N-OS Center et Doctor | `/etc/lightdm/`, `/usr/share/applications/` |
+| `cinnamon/` | LightDM + Slick Greeter (écran de connexion), lanceurs `.desktop` N-OS Center et Doctor, autostart de l'assistant de bienvenue | `/etc/lightdm/`, `/usr/share/applications/`, `/etc/xdg/autostart/` |
 | `plymouth/` | Thème de démarrage (script Plymouth, images) | `/usr/share/plymouth/themes/naabiga/` |
 | `grub/` | Thème GRUB (`theme.txt`, images) | `/boot/grub/themes/naabiga/` |
 | `gtk-theme/`, `icons/` | Réservés au thème GTK et au pack d'icônes N-OS (phase Beta). Alpha : Yaru-red-dark + Papirus-Dark | — |

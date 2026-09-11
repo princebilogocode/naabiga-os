@@ -21,6 +21,9 @@ nos doctor --list          # vérifications disponibles
 | `adb` | Android & Flutter | adb, fastboot, règles udev | installe `adb fastboot` |
 | `flutter` | Android & Flutter | flutter présent, dossier inscriptible, cache Dart | `flutter precache` ou install |
 | `dart` | Android & Flutter | dart dans le PATH | via Flutter |
+| `go` | Langages | go présent, `~/go/bin` dans le PATH (optionnel) | installe Go |
+| `rust` | Langages | rustc et cargo, `~/.cargo/bin` dans le PATH (optionnel) | rustup |
+| `php` | Langages | PHP, Composer, extensions mbstring/xml/curl/zip (optionnel) | installe PHP + Composer |
 | `node` | Web | Node ≥ 20, npm, préfixe npm utilisateur | install / préfixe `~/.nos/npm-global` |
 | `python` | Web | Python 3, pip, venv | installe `python3-pip python3-venv` |
 | `docker` | DevOps | docker, compose, groupe docker, démon actif | install, `usermod`, `systemctl` |
@@ -32,6 +35,8 @@ nos doctor --list          # vérifications disponibles
 | `security` | Système | UFW actif, mises à jour automatiques | active UFW |
 | `ai` | IA | au moins un assistant | — |
 | `office` | Bureautique | LibreOffice, français, polices Office, CUPS (bloquant si un profil bureautique/education/administration est appliqué) | installe LibreOffice fr + CUPS |
+| `education` | Profils | LaTeX, Jupyter, R, Octave, Xournal++, compte salle de TP (bloquant si le profil education est appliqué) | `nos profile apply education` |
+| `administration` | Profils | ClamAV, Déjà Dup, Remmina, realmd, durcissement sudo/dconf (bloquant si le profil administration est appliqué) | `nos profile apply administration` |
 
 ## États
 

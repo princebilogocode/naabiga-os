@@ -5,6 +5,12 @@ Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) — Versionnag
 
 ## [Unreleased]
 
+### Added
+- `nos welcome` : assistant de premier démarrage (whiptail ou non interactif) — profils, IDE, assistants IA, diagnostic ; lancé automatiquement à la première session (`/etc/xdg/autostart/nos-welcome.desktop`).
+- `nos update --check` : compare la version installée avec la dernière version publiée (code de retour 10 si une mise à jour existe).
+- `nos info --json` pour N-OS Center.
+- Doctor : vérifications `go`, `rust`, `php`, `education` et `administration` (bloquantes seulement si le profil est appliqué).
+
 ## [1.0.0-alpha.1] - 2026-09-11
 
 ### Added
