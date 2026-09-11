@@ -1,0 +1,12 @@
+Package: nos-branding
+Version: @VERSION@
+Section: misc
+Priority: optional
+Architecture: all
+Maintainer: ICONEDOR <contact@iconedor.com>
+Depends: plymouth, plymouth-themes, grub-common
+Homepage: https://github.com/princebilogocode/naabiga-os
+Description: Naabiga OS branding (logo, fonds d'écran, Plymouth, GRUB)
+ Identité visuelle de Naabiga OS : logo, palette NAABIGA (rouge #D62828,
+ or #D4AF37, vert #198754), fonds d'écran, thème Plymouth, thème GRUB
+ et fichier /etc/nos-release.

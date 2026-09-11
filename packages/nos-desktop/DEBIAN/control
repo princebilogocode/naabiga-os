@@ -1,0 +1,13 @@
+Package: nos-desktop
+Version: @VERSION@
+Section: x11
+Priority: optional
+Architecture: all
+Maintainer: ICONEDOR <contact@iconedor.com>
+Depends: cinnamon-desktop-environment | cinnamon, dconf-cli, lightdm, slick-greeter, nos-branding
+Recommends: yaru-theme-gtk, yaru-theme-icon, papirus-icon-theme, fonts-inter, fonts-jetbrains-mono, gnome-terminal, nemo, xed
+Homepage: https://github.com/princebilogocode/naabiga-os
+Description: Naabiga OS desktop defaults (Cinnamon)
+ Réglages par défaut du bureau Cinnamon de Naabiga OS : thème, icônes,
+ fond d'écran, panneau, raccourcis, écran de connexion LightDM/Slick Greeter,
+ lanceurs N-OS Center et N-OS Doctor.

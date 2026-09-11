@@ -1,0 +1,33 @@
+# Bureautique, enseignement et administration : socle inclus dans l'ISO
+# (le reste s'installe avec : nos profile apply bureautique|education|administration)
+libreoffice-writer
+libreoffice-calc
+libreoffice-impress
+libreoffice-draw
+libreoffice-math
+libreoffice-gtk3
+libreoffice-l10n-fr
+libreoffice-help-fr
+hunspell-fr-comprehensive
+hyphen-fr
+mythes-fr
+fonts-crosextra-carlito
+fonts-crosextra-caladea
+fonts-liberation2
+thunderbird
+thunderbird-locale-fr
+evince
+pdfarranger
+simple-scan
+sane-airscan
+system-config-printer
+hplip
+printer-driver-all
+keepassxc
+file-roller
+gnome-calendar
+flameshot
+deja-dup
+remmina
+remmina-plugin-rdp
+xournalpp

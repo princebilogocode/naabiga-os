@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.bats text eol=lf
+apps/nos-cli/bin/nos text eol=lf
+*.png binary
+*.jpg binary

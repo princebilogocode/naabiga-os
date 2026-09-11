@@ -1,0 +1,57 @@
+#!/bin/sh
+# Hook chroot : outils de développement non disponibles dans les dépôts Ubuntu
+# (VS Code, Flutter, Node.js LTS) — installés dans /opt pour l'image, activés par nos sdk
+set -e
+
+echo "== [N-OS] Outils de développement"
+export DEBIAN_FRONTEND=noninteractive
+
+# --- Visual Studio Code (dépôt Microsoft) --------------------------------------
+if [ "${NOS_SKIP_VSCODE:-0}" != "1" ]; then
+  apt-get install -y --no-install-recommends wget gpg apt-transport-https >/dev/null
+  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /usr/share/keyrings/packages.microsoft.gpg
+  echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list
+  apt-get update >/dev/null
+  apt-get install -y --no-install-recommends code
+fi
+
+# --- Flutter stable dans /opt/nos/sdk/flutter/stable ---------------------------
+if [ "${NOS_SKIP_FLUTTER:-0}" != "1" ]; then
+  mkdir -p /opt/nos/sdk/flutter
+  if [ ! -d /opt/nos/sdk/flutter/stable ]; then
+    git clone --depth 1 -b stable https://github.com/flutter/flutter.git /opt/nos/sdk/flutter/stable
+    git config --global --add safe.directory /opt/nos/sdk/flutter/stable
+    /opt/nos/sdk/flutter/stable/bin/flutter --version --suppress-analytics >/dev/null 2>&1 || true
+    /opt/nos/sdk/flutter/stable/bin/flutter precache --linux --android >/dev/null 2>&1 || true
+  fi
+  ln -sfn stable /opt/nos/sdk/flutter/current
+  chmod -R a+rwX /opt/nos/sdk/flutter
+fi
+
+# --- Node.js LTS dans /opt/nos/sdk/node ------------------------------------------
+if [ "${NOS_SKIP_NODE:-0}" != "1" ]; then
+  NODE_VERSION="$(curl -fsSL https://nodejs.org/dist/index.json | tr '{' '\n' | grep -v '"lts":false' | grep -o '"version":"v[0-9.]*"' | head -n 1 | grep -o 'v[0-9.]*')"
+  mkdir -p "/opt/nos/sdk/node/${NODE_VERSION#v}"
+  curl -fsSL "https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}-linux-x64.tar.xz" | tar -xJ -C "/opt/nos/sdk/node/${NODE_VERSION#v}" --strip-components=1
+  ln -sfn "${NODE_VERSION#v}" /opt/nos/sdk/node/current
+  ln -sfn /opt/nos/sdk/node/current/bin/node /usr/local/bin/node
+  ln -sfn /opt/nos/sdk/node/current/bin/npm /usr/local/bin/npm
+  ln -sfn /opt/nos/sdk/node/current/bin/npx /usr/local/bin/npx
+  # Assistants IA globaux (Claude Code, Gemini CLI, OpenCode)
+  /opt/nos/sdk/node/current/bin/npm install -g @anthropic-ai/claude-code @google/gemini-cli opencode-ai >/dev/null 2>&1 || true
+  for b in claude gemini opencode; do
+    [ -x "/opt/nos/sdk/node/current/bin/$b" ] && ln -sfn "/opt/nos/sdk/node/current/bin/$b" "/usr/local/bin/$b"
+  done
+fi
+
+# --- Profil système : PATH des SDK de l'image -------------------------------------
+cat > /etc/profile.d/nos-sdk.sh <<'EOF'
+# Naabiga OS — SDK système (/opt/nos/sdk). L'utilisateur peut les remplacer avec : nos sdk use …
+[ -d /opt/nos/sdk/flutter/current/bin ] && export FLUTTER_ROOT="/opt/nos/sdk/flutter/current" && export PATH="$FLUTTER_ROOT/bin:$FLUTTER_ROOT/bin/cache/dart-sdk/bin:$PATH"
+[ -d /opt/nos/sdk/node/current/bin ] && export PATH="/opt/nos/sdk/node/current/bin:$PATH"
+[ -d /usr/lib/jvm/java-17-openjdk-amd64 ] && export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+export ANDROID_HOME="${ANDROID_HOME:-$HOME/.nos/sdk/android/current}"
+export PATH="$HOME/.local/bin:$HOME/.pub-cache/bin:$PATH"
+EOF
+
+echo "== [N-OS] Outils de développement installés"

@@ -1,0 +1,89 @@
+#!/bin/sh
+# Hook chroot : identité Naabiga OS (os-release, hostname, locale, session par défaut)
+set -e
+
+echo "== [N-OS] Branding du système"
+
+# /etc/os-release : on conserve l'ID ubuntu pour la compatibilité APT/PPA, on personnalise le nom affiché
+NOS_VERSION="$(sed -n 's/^NOS_VERSION="\(.*\)"/\1/p' /etc/nos-release 2>/dev/null || echo dev)"
+if [ -f /etc/os-release ]; then
+  sed -i \
+    -e "s/^PRETTY_NAME=.*/PRETTY_NAME=\"Naabiga OS ${NOS_VERSION} (Ubuntu 24.04 LTS)\"/" \
+    -e "s/^NAME=.*/NAME=\"Naabiga OS\"/" \
+    -e "s|^HOME_URL=.*|HOME_URL=\"https://github.com/princebilogocode/naabiga-os\"|" \
+    -e "s|^SUPPORT_URL=.*|SUPPORT_URL=\"https://github.com/princebilogocode/naabiga-os/issues\"|" \
+    -e "s|^BUG_REPORT_URL=.*|BUG_REPORT_URL=\"https://github.com/princebilogocode/naabiga-os/issues\"|" \
+    /etc/os-release
+  grep -q '^LOGO=' /etc/os-release || echo 'LOGO=naabiga-os' >> /etc/os-release
+fi
+[ -f /usr/lib/os-release ] && cp /etc/os-release /usr/lib/os-release
+
+if [ -f /etc/lsb-release ]; then
+  sed -i "s/^DISTRIB_DESCRIPTION=.*/DISTRIB_DESCRIPTION=\"Naabiga OS ${NOS_VERSION}\"/" /etc/lsb-release
+fi
+
+echo "naabiga-os" > /etc/hostname
+cat > /etc/issue <<EOF
+Naabiga OS ${NOS_VERSION} \\n \\l
+
+EOF
+cat > /etc/motd <<'EOF'
+
+  Naabiga OS — Build Faster. Create Smarter.
+  ICONEDOR × Université Aube Nouvelle (Bobo-Dioulasso)
+
+  nos doctor   diagnostic de votre environnement de développement
+  nos help     toutes les commandes
+
+EOF
+
+# Locale française par défaut, anglais disponible
+sed -i 's/^# *fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/; s/^# *en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
+locale-gen >/dev/null 2>&1 || true
+update-locale LANG=fr_FR.UTF-8 LANGUAGE=fr_FR:fr:en LC_ALL= >/dev/null 2>&1 || true
+cat > /etc/default/keyboard <<'EOF'
+XKBMODEL="pc105"
+XKBLAYOUT="fr"
+XKBVARIANT=""
+XKBOPTIONS=""
+BACKSPACE="guess"
+EOF
+ln -sf /usr/share/zoneinfo/Africa/Ouagadougou /etc/localtime
+echo "Africa/Ouagadougou" > /etc/timezone
+
+# Session Cinnamon par défaut
+mkdir -p /etc/lightdm/lightdm.conf.d
+cat > /etc/lightdm/lightdm.conf.d/50-nos-session.conf <<'EOF'
+[Seat:*]
+user-session=cinnamon
+greeter-session=slick-greeter
+EOF
+
+# Pas de Snap par défaut (Flatpak activé) — voir docs/architecture
+if dpkg -s snapd >/dev/null 2>&1; then
+  apt-get purge -y snapd >/dev/null 2>&1 || true
+fi
+mkdir -p /etc/apt/preferences.d
+cat > /etc/apt/preferences.d/nosnap.pref <<'EOF'
+# Naabiga OS : Snap n'est pas installé par défaut (Flatpak est utilisé). Supprimez ce fichier pour l'autoriser.
+Package: snapd
+Pin: release a=*
+Pin-Priority: -10
+EOF
+
+# Firefox : version .deb via Flatpak ou PPA Mozilla plutôt que le snap Ubuntu
+if ! dpkg -s firefox >/dev/null 2>&1; then
+  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo >/dev/null 2>&1 || true
+fi
+
+# dconf : réglages Cinnamon N-OS
+dconf update >/dev/null 2>&1 || true
+
+# Services
+systemctl enable lightdm >/dev/null 2>&1 || true
+systemctl enable nos-first-boot.service >/dev/null 2>&1 || true
+systemctl enable fstrim.timer >/dev/null 2>&1 || true
+systemctl enable zramswap.service >/dev/null 2>&1 || true
+systemctl enable ufw >/dev/null 2>&1 || true
+
+echo "== [N-OS] Branding terminé"

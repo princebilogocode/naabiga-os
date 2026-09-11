@@ -1,0 +1,14 @@
+Package: nos-base
+Version: @VERSION@
+Section: metapackages
+Priority: optional
+Architecture: all
+Maintainer: ICONEDOR <contact@iconedor.com>
+Depends: nos-cli, nos-branding, ubuntu-standard, systemd, zram-tools, ufw, unattended-upgrades, apparmor, apt-transport-https, ca-certificates, curl, wget, git, openssh-client, build-essential, cmake, clang, pkg-config, python3, python3-pip, python3-venv, pipx, openjdk-17-jdk, adb, fastboot, android-sdk-platform-tools-common, sqlite3, postgresql-client, redis-tools, php-cli, composer, golang-go, ffmpeg, flatpak, libglu1-mesa, libgtk-3-dev, ninja-build, xz-utils, zip, unzip, bash-completion, htop, tree, jq, vim, nano
+Recommends: nos-desktop, docker.io, docker-compose-v2, nginx, firefox
+Suggests: android-studio, code
+Homepage: https://github.com/princebilogocode/naabiga-os
+Description: Naabiga OS base system (metapackage)
+ Métapaquet de la plateforme de développement Naabiga OS : outils de base,
+ compilateurs, Java 17, Python, PHP, Go, clients de bases de données, adb,
+ optimisations système (ZRAM, TRIM, sysctl) et service de premier démarrage.

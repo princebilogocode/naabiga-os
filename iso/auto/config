@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# Configuration live-build de l'ISO Naabiga OS
+# Base : Ubuntu 24.04 LTS (noble) — Bureau : Cinnamon — Installateur : Calamares
+# Appelé par build/build-iso.sh (variables NOS_VERSION, NOS_ARCH, NOS_MIRROR)
+# SPDX-License-Identifier: GPL-3.0-or-later
+set -euo pipefail
+
+NOS_VERSION="${NOS_VERSION:-dev}"
+NOS_ARCH="${NOS_ARCH:-amd64}"
+NOS_MIRROR="${NOS_MIRROR:-http://archive.ubuntu.com/ubuntu/}"
+NOS_SECURITY_MIRROR="${NOS_SECURITY_MIRROR:-http://security.ubuntu.com/ubuntu/}"
+NOS_CODENAME="${NOS_CODENAME:-noble}"
+
+lb config noauto \
+  --mode ubuntu \
+  --distribution "$NOS_CODENAME" \
+  --parent-distribution "$NOS_CODENAME" \
+  --architectures "$NOS_ARCH" \
+  --archive-areas "main restricted universe multiverse" \
+  --parent-archive-areas "main restricted universe multiverse" \
+  --mirror-bootstrap "$NOS_MIRROR" \
+  --mirror-chroot "$NOS_MIRROR" \
+  --mirror-chroot-security "$NOS_SECURITY_MIRROR" \
+  --mirror-binary "$NOS_MIRROR" \
+  --mirror-binary-security "$NOS_SECURITY_MIRROR" \
+  --parent-mirror-bootstrap "$NOS_MIRROR" \
+  --parent-mirror-chroot "$NOS_MIRROR" \
+  --parent-mirror-chroot-security "$NOS_SECURITY_MIRROR" \
+  --parent-mirror-binary "$NOS_MIRROR" \
+  --parent-mirror-binary-security "$NOS_SECURITY_MIRROR" \
+  --security true \
+  --updates true \
+  --backports false \
+  --binary-images iso-hybrid \
+  --bootloaders "syslinux,grub-efi" \
+  --uefi-secure-boot auto \
+  --debian-installer none \
+  --linux-flavours generic \
+  --linux-packages "linux-image linux-headers" \
+  --initramfs live-boot \
+  --initsystem systemd \
+  --chroot-squashfs-compression-type zstd \
+  --apt-recommends false \
+  --apt-indices false \
+  --cache-packages true \
+  --iso-application "Naabiga OS" \
+  --iso-publisher "ICONEDOR — https://github.com/princebilogocode/naabiga-os" \
+  --iso-preparer "Naabiga OS build system (live-build)" \
+  --iso-volume "NAABIGA_OS_${NOS_VERSION}" \
+  --image-name "live-image" \
+  --bootappend-live "boot=live components quiet splash locales=fr_FR.UTF-8 keyboard-layouts=fr timezone=Africa/Ouagadougou username=naabiga hostname=naabiga-os user-fullname=Naabiga" \
+  --memtest none \
+  --win32-loader false \
+  "${@}"

@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+# nos — Naabiga OS command line interface
+# Copyright (C) 2026 ICONEDOR — Burkina Faso
+# Développé en collaboration avec les étudiants de l'Université Aube Nouvelle (Bobo-Dioulasso)
+# SPDX-License-Identifier: GPL-3.0-or-later
+set -euo pipefail
+
+# ---------------------------------------------------------------------------
+# Résolution des chemins : mode installé (/usr/lib/nos) ou mode dépôt (apps/…)
+# ---------------------------------------------------------------------------
+nos_resolve_self() {
+  local src="${BASH_SOURCE[0]}"
+  while [ -L "$src" ]; do
+    local dir
+    dir="$(cd -P "$(dirname "$src")" && pwd)"
+    src="$(readlink "$src")"
+    [[ "$src" != /* ]] && src="$dir/$src"
+  done
+  cd -P "$(dirname "$src")" && pwd
+}
+
+NOS_BIN_DIR="$(nos_resolve_self)"
+
+if [ -d "$NOS_BIN_DIR/../lib/commands" ] && [ -d "$NOS_BIN_DIR/../../nos-doctor/lib" ]; then
+  # Mode dépôt : apps/nos-cli/bin/nos
+  NOS_ROOT="$(cd "$NOS_BIN_DIR/../../.." && pwd)"
+  NOS_LIB="$NOS_ROOT/apps/nos-cli/lib"
+  NOS_SHARE="$NOS_ROOT/apps/nos-cli/share"
+  NOS_DOCTOR_LIB="$NOS_ROOT/apps/nos-doctor/lib"
+  NOS_SDK_LIB="$NOS_ROOT/apps/nos-sdk/lib"
+  NOS_AI_LIB="$NOS_ROOT/apps/nos-ai/lib"
+  NOS_SCRIPTS="$NOS_ROOT/scripts"
+  NOS_MODE="dev"
+else
+  # Mode installé : /usr/bin/nos
+  NOS_ROOT="/usr/lib/nos"
+  NOS_LIB="$NOS_ROOT/lib"
+  NOS_SHARE="${NOS_SHARE:-/usr/share/nos}"
+  NOS_DOCTOR_LIB="$NOS_ROOT/doctor"
+  NOS_SDK_LIB="$NOS_ROOT/sdk"
+  NOS_AI_LIB="$NOS_ROOT/ai"
+  NOS_SCRIPTS="$NOS_ROOT/scripts"
+  NOS_MODE="installed"
+fi
+export NOS_ROOT NOS_LIB NOS_SHARE NOS_DOCTOR_LIB NOS_SDK_LIB NOS_AI_LIB NOS_SCRIPTS NOS_MODE
+
+# shellcheck source=../lib/core.sh
+source "$NOS_LIB/core.sh"
+
+# ---------------------------------------------------------------------------
+# Dispatch
+# ---------------------------------------------------------------------------
+main() {
+  local cmd="${1:-help}"
+  [ $# -gt 0 ] && shift
+
+  case "$cmd" in
+    -h|--help|help) cmd="help" ;;
+    -v|-V|--version) cmd="version" ;;
+  esac
+
+  local cmd_file="$NOS_LIB/commands/$cmd.sh"
+  if [ ! -f "$cmd_file" ]; then
+    nos_err "Commande inconnue : $cmd"
+    nos_info "Tapez 'nos help' pour la liste des commandes."
+    return 2
+  fi
+
+  # shellcheck source=/dev/null
+  source "$cmd_file"
+  "cmd_$cmd" "$@"
+}
+
+main "$@"

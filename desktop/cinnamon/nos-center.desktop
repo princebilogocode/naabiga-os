@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=N-OS Center
+Name[fr]=N-OS Center
+Comment=Centre logiciel Naabiga OS : IDE, SDK, IA, mises à jour
+Comment[fr]=Centre logiciel Naabiga OS : IDE, SDK, IA, mises à jour
+Exec=nos-center
+Icon=naabiga-os
+Terminal=false
+Categories=System;Settings;Development;
+Keywords=nos;naabiga;sdk;flutter;android;docker;ia;
+StartupNotify=true

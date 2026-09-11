@@ -1,0 +1,11 @@
+#!/bin/sh
+# Hook chroot : nettoyage pour réduire la taille de l'image
+set -e
+echo "== [N-OS] Nettoyage"
+apt-get autoremove -y >/dev/null 2>&1 || true
+apt-get clean
+rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*.deb /tmp/* /var/tmp/* /root/.cache /root/.npm /root/.gradle 2>/dev/null || true
+find /var/log -type f -exec truncate -s 0 {} + 2>/dev/null || true
+rm -f /etc/machine-id /var/lib/dbus/machine-id
+touch /etc/machine-id
+echo "== [N-OS] Nettoyage terminé"

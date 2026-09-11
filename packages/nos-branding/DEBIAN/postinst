@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+# Active le thème Plymouth N-OS et le thème GRUB
+if command -v update-alternatives >/dev/null 2>&1 && [ -f /usr/share/plymouth/themes/naabiga/naabiga.plymouth ]; then
+  update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/naabiga/naabiga.plymouth 200 || true
+  update-alternatives --set default.plymouth /usr/share/plymouth/themes/naabiga/naabiga.plymouth || true
+  if command -v update-initramfs >/dev/null 2>&1 && [ -z "${NOS_SKIP_INITRAMFS:-}" ]; then
+    update-initramfs -u >/dev/null 2>&1 || true
+  fi
+fi
+if [ -d /etc/default/grub.d ]; then
+  cat > /etc/default/grub.d/90-naabiga.cfg <<'EOF'
+GRUB_DISTRIBUTOR="Naabiga OS"
+GRUB_THEME="/boot/grub/themes/naabiga/theme.txt"
+GRUB_TIMEOUT=3
+GRUB_TIMEOUT_STYLE=menu
+EOF
+  if command -v update-grub >/dev/null 2>&1 && [ -z "${NOS_SKIP_GRUB:-}" ] && [ -d /boot/grub ]; then
+    update-grub >/dev/null 2>&1 || true
+  fi
+fi
+# Mise à jour du cache d'icônes
+if command -v gtk-update-icon-cache >/dev/null 2>&1; then
+  gtk-update-icon-cache -f -q /usr/share/icons/hicolor 2>/dev/null || true
+fi
+exit 0

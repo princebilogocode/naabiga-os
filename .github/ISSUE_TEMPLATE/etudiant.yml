@@ -1,0 +1,38 @@
+name: "🎓 Mission étudiante"
+description: Créer une mission pour un étudiant de l'Université Aube Nouvelle (encadrants)
+labels: ["étudiant", "good first issue"]
+body:
+  - type: dropdown
+    id: level
+    attributes:
+      label: Niveau
+      options: [Découverte, Contributeur, Ingénieur]
+    validations:
+      required: true
+  - type: dropdown
+    id: team
+    attributes:
+      label: Équipe
+      options: [Distribution, Applications, UX/UI, Infrastructure, QA, Documentation]
+    validations:
+      required: true
+  - type: textarea
+    id: mission
+    attributes:
+      label: Mission
+      description: Objectif concret, fichiers concernés, résultat attendu.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Critères de validation
+      placeholder: |
+        - [ ] make lint test passe
+        - [ ] documentation mise à jour
+        - [ ] PR relue et fusionnée
+  - type: input
+    id: mentor
+    attributes:
+      label: Encadrant (GitHub)
+      placeholder: "@princebilogocode"

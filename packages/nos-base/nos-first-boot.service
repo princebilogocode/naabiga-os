@@ -1,0 +1,14 @@
+[Unit]
+Description=Naabiga OS first boot configuration
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=!/var/lib/nos/first-boot.done
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/nos/scripts/first-boot/run-all.sh
+RemainAfterExit=yes
+StandardOutput=journal+console
+
+[Install]
+WantedBy=multi-user.target

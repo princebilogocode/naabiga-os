@@ -1,0 +1,17 @@
+# Système live et démarrage
+live-boot
+live-config
+live-config-systemd
+live-tools
+casper
+lupin-casper
+user-setup
+localechooser-data
+plymouth
+plymouth-themes
+plymouth-label
+grub-pc-bin
+grub-efi-amd64-signed
+shim-signed
+efibootmgr
+os-prober

@@ -1,0 +1,63 @@
+# Naabiga OS — réglages Cinnamon par défaut (dconf, base locale)
+# Appliqué par : dconf update  (paquet nos-desktop)
+
+[org/cinnamon/desktop/interface]
+gtk-theme='Yaru-red-dark'
+icon-theme='Papirus-Dark'
+cursor-theme='Adwaita'
+font-name='Inter 10'
+clock-show-date=true
+clock-use-24h=true
+
+[org/cinnamon/desktop/wm/preferences]
+titlebar-font='Poppins Bold 10'
+theme='Yaru-red-dark'
+button-layout=':minimize,maximize,close'
+
+[org/cinnamon/theme]
+name='cinnamon'
+
+[org/cinnamon]
+enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:grouped-window-list@cinnamon.org:1', 'panel1:right:0:systray@cinnamon.org:2', 'panel1:right:1:xapp-status@cinnamon.org:3', 'panel1:right:2:notifications@cinnamon.org:4', 'panel1:right:3:printers@cinnamon.org:5', 'panel1:right:4:removable-drives@cinnamon.org:6', 'panel1:right:5:keyboard@cinnamon.org:7', 'panel1:right:6:network@cinnamon.org:8', 'panel1:right:7:sound@cinnamon.org:9', 'panel1:right:8:power@cinnamon.org:10', 'panel1:right:9:calendar@cinnamon.org:11']
+panels-enabled=['1:0:bottom']
+panels-height=['1:40']
+favorite-apps=['nemo.desktop', 'gnome-terminal.desktop', 'code.desktop', 'android-studio.desktop', 'nos-center.desktop', 'firefox.desktop', 'cinnamon-settings.desktop']
+startup-animation=true
+desktop-effects-workspace=true
+
+[org/cinnamon/desktop/background]
+picture-uri='file:///usr/share/backgrounds/naabiga/naabiga-default.svg'
+picture-options='zoom'
+primary-color='#111111'
+
+[org/cinnamon/desktop/screensaver]
+lock-enabled=true
+lock-delay=uint32 300
+
+[org/cinnamon/desktop/keybindings/media-keys]
+terminal=['<Primary><Alt>t']
+home=['<Super>e']
+
+[org/cinnamon/desktop/keybindings]
+custom-list=['custom0']
+
+[org/cinnamon/desktop/keybindings/custom-keybindings/custom0]
+name='N-OS Doctor'
+command='gnome-terminal -- bash -c "nos doctor; read -p \"Entrée pour fermer\""'
+binding=['<Super>d']
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+font='JetBrains Mono 11'
+use-system-font=false
+use-theme-colors=false
+background-color='#111111'
+foreground-color='#F5F5F5'
+palette=['#111111', '#D62828', '#198754', '#D4AF37', '#2F6FED', '#A5427A', '#1A9CA1', '#DDDDDD', '#555555', '#F25C5C', '#3CB371', '#F1CF5A', '#5A8DFF', '#C46AA6', '#3FC2C8', '#FFFFFF']
+
+[org/nemo/preferences]
+show-hidden-files=false
+default-folder-viewer='list-view'
+
+[org/x/editor/preferences/editor]
+scheme='oblivion'
+display-line-numbers=true

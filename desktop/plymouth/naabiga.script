@@ -1,0 +1,60 @@
+// Naabiga OS — thème Plymouth (script)
+// Fond noir #111111, logo centré, barre de progression or → rouge
+
+Window.SetBackgroundTopColor(0.067, 0.067, 0.067);
+Window.SetBackgroundBottomColor(0.067, 0.067, 0.067);
+
+logo.image = Image("logo.png");
+logo.sprite = Sprite(logo.image);
+logo.x = Window.GetWidth() / 2 - logo.image.GetWidth() / 2;
+logo.y = Window.GetHeight() / 2 - logo.image.GetHeight() / 2 - 40;
+logo.sprite.SetPosition(logo.x, logo.y, 10);
+
+// Barre de progression
+bar.width = 320;
+bar.height = 4;
+bar.x = Window.GetWidth() / 2 - bar.width / 2;
+bar.y = logo.y + logo.image.GetHeight() + 48;
+
+bar.bg = Image("progress-bg.png").Scale(bar.width, bar.height);
+bar.bg_sprite = Sprite(bar.bg);
+bar.bg_sprite.SetPosition(bar.x, bar.y, 5);
+
+bar.fg = Image("progress-fg.png");
+bar.fg_sprite = Sprite();
+bar.fg_sprite.SetPosition(bar.x, bar.y, 6);
+
+fun progress_callback(duration, progress) {
+  bar.fg_sprite.SetImage(bar.fg.Scale(bar.width * progress, bar.height));
+}
+Plymouth.SetBootProgressFunction(progress_callback);
+
+// Message (ex. déverrouillage du disque, fsck)
+message_sprite = Sprite();
+message_sprite.SetPosition(10, Window.GetHeight() - 40, 10000);
+
+fun message_callback(text) {
+  message_image = Image.Text(text, 0.96, 0.96, 0.96, 1, "Sans 11");
+  message_sprite.SetImage(message_image);
+  message_sprite.SetX(Window.GetWidth() / 2 - message_image.GetWidth() / 2);
+}
+Plymouth.SetMessageFunction(message_callback);
+Plymouth.SetDisplayMessageFunction(message_callback);
+
+// Saisie du mot de passe (LUKS)
+fun display_password_callback(prompt, bullets) {
+  prompt_image = Image.Text(prompt + " " + String("•").Repeat(bullets), 0.83, 0.69, 0.22, 1, "Sans 12");
+  message_sprite.SetImage(prompt_image);
+  message_sprite.SetX(Window.GetWidth() / 2 - prompt_image.GetWidth() / 2);
+}
+Plymouth.SetDisplayPasswordFunction(display_password_callback);
+
+fun display_normal_callback() {
+  message_sprite.SetImage(Image.Text("", 1, 1, 1));
+}
+Plymouth.SetDisplayNormalFunction(display_normal_callback);
+
+fun quit_callback() {
+  logo.sprite.SetOpacity(1);
+}
+Plymouth.SetQuitFunction(quit_callback);

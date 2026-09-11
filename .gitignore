@@ -1,0 +1,86 @@
+# Build ISO / live-build
+build/out/
+build/work/
+build/cache/
+iso/.build/
+iso/cache/
+iso/chroot/
+iso/binary/
+iso/*.iso
+iso/*.log
+iso/*.packages
+iso/*.contents
+iso/*.files
+iso/*.hybrid.iso
+iso/*.zsync
+iso/config/binary
+iso/config/bootstrap
+iso/config/chroot
+iso/config/common
+iso/config/source
+iso/local/
+iso/config/packages.chroot/
+iso/config/includes.chroot/etc/calamares/
+iso/config/includes.chroot/usr/share/applications/
+iso/config/includes.chroot/etc/skel/Desktop/
+iso/config/includes.chroot/usr/share/plymouth/
+iso/config/includes.chroot/boot/
+iso/build.log
+*.iso
+*.deb
+*.changes
+*.buildinfo
+packages/**/tmp/
+
+# Docs
+site/
+
+# Flutter / Dart (nos-center)
+apps/nos-center/.dart_tool/
+apps/nos-center/.packages
+apps/nos-center/build/
+apps/nos-center/.flutter-plugins*
+apps/nos-center/pubspec.lock
+apps/nos-center/linux/flutter/ephemeral/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Tests
+tests/.tmp/
+tests/out/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+docs/assets/logo.png
+
+# Secrets — jamais versionnés (voir scripts/check-secrets.sh et docs/security)
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*keystore*
+id_rsa*
+id_ed25519*
+*.token
+google-services.json
+GoogleService-Info.plist
+*firebase-adminsdk*.json
+service-account*.json
+credentials.json
+.netrc
+.npmrc
+.pypirc
+secrets/
+secret.*
+secrets.*

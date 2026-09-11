@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+# Rend le profil N-OS disponible à la prochaine connexion
+chmod 0644 /etc/profile.d/nos.sh 2>/dev/null || true
+exit 0

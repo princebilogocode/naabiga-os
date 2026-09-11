@@ -1,0 +1,17 @@
+Package: nos-cli
+Version: @VERSION@
+Section: devel
+Priority: optional
+Architecture: all
+Maintainer: ICONEDOR <contact@iconedor.com>
+Depends: bash (>= 5.0), coreutils, curl, git, tar, xz-utils, unzip, findutils
+Recommends: flatpak, pipx, shellcheck
+Homepage: https://github.com/princebilogocode/naabiga-os
+Description: Naabiga OS command line interface (nos)
+ Point d'entrée unique de l'écosystème Naabiga OS :
+ nos doctor (diagnostic et réparation de l'environnement de développement),
+ nos install (catalogue d'outils), nos sdk (gestion multi-versions de Flutter,
+ Java, Node.js et Android SDK), nos ai (assistants IA), nos update, nos info.
+ .
+ Développé par ICONEDOR (Burkina Faso) en collaboration avec les étudiants
+ de l'Université Aube Nouvelle de Bobo-Dioulasso.

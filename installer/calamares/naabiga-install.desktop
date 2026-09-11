@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Installer Naabiga OS
+Name[en]=Install Naabiga OS
+Comment=Installer Naabiga OS sur cet ordinateur
+Comment[en]=Install Naabiga OS on this computer
+Exec=sudo -E calamares
+Icon=naabiga-os
+Terminal=false
+Categories=System;
+StartupNotify=true

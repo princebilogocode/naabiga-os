@@ -1,0 +1,47 @@
+name: "🐛 Bug"
+description: Signaler un problème dans Naabiga OS ou la CLI nos
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Merci ! Pour une vulnérabilité de sécurité, n'utilisez pas ce formulaire (voir SECURITY.md).
+  - type: input
+    id: version
+    attributes:
+      label: Version de N-OS
+      description: Sortie de `nos version`
+      placeholder: "Naabiga OS 1.0.0-alpha.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Composant
+      options: [ISO / démarrage, Installateur, Bureau, nos CLI, nos doctor, nos sdk, nos ai, N-OS Center, Paquets, Documentation, Autre]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Que se passe-t-il ?
+      description: Comportement observé et comportement attendu.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      placeholder: |
+        1. …
+        2. …
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Sortie de `nos doctor --json` et `nos info`
+      render: shell
+  - type: input
+    id: hardware
+    attributes:
+      label: Matériel (CPU, GPU, RAM, BIOS/UEFI)

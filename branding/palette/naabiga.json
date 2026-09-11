@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "NAABIGA",
+  "product": "Naabiga OS",
+  "product_colors": ["red", "gold"],
+  "colors": {
+    "red":   { "hex": "#D62828", "rgb": [214, 40, 40],   "meaning": "courage, ambition, énergie", "usage": "boutons importants, alertes, actions" },
+    "gold":  { "hex": "#D4AF37", "rgb": [212, 175, 55],  "meaning": "excellence, innovation, prestige", "usage": "logo, icônes premium, éléments importants" },
+    "green": { "hex": "#198754", "rgb": [25, 135, 84],   "meaning": "croissance, Afrique, confiance", "usage": "validation, succès" },
+    "white": { "hex": "#FFFFFF", "rgb": [255, 255, 255], "meaning": "simplicité, modernité", "usage": "fond principal" },
+    "black": { "hex": "#111111", "rgb": [17, 17, 17],    "meaning": "puissance, technologie, élégance", "usage": "texte principal, fond sombre" }
+  },
+  "terminal_palette": [
+    "#111111", "#D62828", "#198754", "#D4AF37", "#2F6FED", "#A5427A", "#1A9CA1", "#DDDDDD",
+    "#555555", "#F25C5C", "#3CB371", "#F1CF5A", "#5A8DFF", "#C46AA6", "#3FC2C8", "#FFFFFF"
+  ],
+  "typography": {
+    "headings": ["Poppins Bold", "Montserrat Bold", "Inter Bold"],
+    "body": ["Inter", "Manrope", "Roboto"],
+    "monospace": ["JetBrains Mono", "DejaVu Sans Mono"]
+  },
+  "ui": { "border_radius_px": [12, 16], "principle": "moins, mais mieux" },
+  "slogans": {
+    "os": "Build Faster. Create Smarter.",
+    "brand": ["Built in Africa. Ready for the World.", "Le numérique africain, sans limites.", "Créer. Connecter. Transformer."]
+  }
+}

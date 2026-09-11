@@ -1,0 +1,5 @@
+# Paquets N-OS (copiés dans config/packages.chroot par build/build-iso.sh)
+nos-cli
+nos-branding
+nos-desktop
+nos-base

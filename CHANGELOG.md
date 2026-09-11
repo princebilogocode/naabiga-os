@@ -1,0 +1,31 @@
+# Changelog
+
+Toutes les modifications notables de ce projet sont documentées ici.
+Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) — Versionnage : [SemVer](https://semver.org/lang/fr/).
+
+## [Unreleased]
+
+## [1.0.0-alpha.1] - 2026-09-11
+
+### Added
+- Structure officielle du dépôt conforme au Project Charter.
+- Documentation fondatrice (cahier des charges, spécification, charte, blueprint, SAD) publiée avec MkDocs Material.
+- `nos` CLI (Bash) : `doctor`, `install`, `remove`, `update`, `repair`, `sdk`, `ai`, `info`, `version`, `config`.
+- N-OS Doctor (17 vérifications) : Git, Java, Android SDK, adb, Flutter, Dart, Node.js, Python, Docker, PATH, variables d'environnement ; réparation automatique ; export JSON et HTML.
+- N-OS SDK Manager : gestion multi-versions de Flutter, Java, Node.js et Android SDK.
+- N-OS AI Hub : installation de Claude Code, Gemini CLI, Ollama, Aider, OpenCode, Continue.
+- Catalogue d'outils `nos install` (68 entrées : IDE, langages, bases de données, navigateurs, IA, bureautique, enseignement, administration).
+- `nos profile` : profils d'usage **dev**, **bureautique** (LibreOffice fr, polices Office, impression/scan, PDF/OCR), **education** (LaTeX, Jupyter, R, Octave, GeoGebra, Zotero, Veyon, mode salle de TP) et **administration** (durcissement, sauvegardes, ClamAV, Active Directory, inventaire GLPI, USB lecture seule) avec optimisations dédiées.
+- Vérification Doctor `office` (LibreOffice, français, impression).
+- Politique zéro secret : `.gitignore` renforcé, `scripts/check-secrets.sh`, hook pre-commit, job CI + Gitleaks.
+- Configuration live-build pour l'ISO Ubuntu 24.04 + Cinnamon, hooks de branding et d'optimisation.
+- Configuration Calamares (français par défaut, LUKS proposé, branding N-OS).
+- Personnalisation Cinnamon (dconf), Plymouth, GRUB, thème et palette NAABIGA.
+- Paquets .deb : `nos-base`, `nos-branding`, `nos-cli`, `nos-desktop`.
+- Scripts d'optimisation : ZRAM, TRIM, SSD, Docker, Flutter, Android Studio, démarrage rapide.
+- Squelette Flutter Desktop de N-OS Center.
+- CI GitHub Actions : lint (shellcheck), tests (bats), build docs, build paquets, build ISO manuel.
+- Tests bats pour la CLI et Doctor.
+
+[Unreleased]: https://github.com/princebilogocode/naabiga-os/compare/v1.0.0-alpha.1...HEAD
+[1.0.0-alpha.1]: https://github.com/princebilogocode/naabiga-os/releases/tag/v1.0.0-alpha.1

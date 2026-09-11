@@ -1,0 +1,99 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop, "release/**", "hotfix/**"]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  secrets:
+    name: Aucun secret versionné
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Scanner N-OS (motifs et fichiers sensibles)
+        run: bash scripts/check-secrets.sh
+      - name: Gitleaks (historique complet)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  lint:
+    name: Lint (shellcheck)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Installer shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+      - run: make lint
+
+  test:
+    name: Tests (bats + intégration)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Installer bats et dpkg-dev
+        run: sudo apt-get update && sudo apt-get install -y bats dpkg-dev fakeroot
+      - run: make test-unit
+      - run: make test-integration
+
+  packages:
+    name: Paquets .deb
+    runs-on: ubuntu-24.04
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y dpkg-dev fakeroot
+      - run: make packages
+      - name: Installer nos-cli dans un conteneur Ubuntu 24.04
+        run: |
+          docker run --rm -v "$PWD/build/out/packages:/pkgs" ubuntu:24.04 bash -c '
+            set -e
+            apt-get update >/dev/null
+            apt-get install -y --no-install-recommends /pkgs/nos-cli_*.deb >/dev/null
+            nos version
+            nos doctor --list
+            nos doctor --json --no-fail | head -c 400
+            nos install --list | head -20
+          '
+      - uses: actions/upload-artifact@v4
+        with:
+          name: packages
+          path: build/out/packages/*.deb
+          retention-days: 14
+
+  docs:
+    name: Documentation (mkdocs --strict)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install mkdocs-material
+      - run: cp branding/logo/naabiga-os-logo.png docs/assets/logo.png
+      - run: mkdocs build --strict
+
+  flutter:
+    name: N-OS Center (analyze + test)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Préparer le projet
+        working-directory: apps/nos-center
+        run: |
+          mkdir -p assets && cp ../../branding/logo/naabiga-os-logo.png assets/logo.png
+          flutter pub get
+      - run: flutter analyze
+        working-directory: apps/nos-center
+      - run: flutter test
+        working-directory: apps/nos-center

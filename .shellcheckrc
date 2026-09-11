@@ -1,0 +1,10 @@
+# Naabiga OS — configuration shellcheck
+# Les bibliothèques sont chargées dynamiquement via $NOS_*_LIB : shellcheck ne peut pas suivre les sources.
+disable=SC1091
+# Les chaînes en simples quotes écrites dans ~/.nos/env.sh doivent rester non expansées.
+disable=SC2016
+# Idiome délibéré "test && ok || fail" dans les scripts de test.
+disable=SC2015
+# Variables définies dans core.sh et utilisées par les modules chargés ensuite.
+disable=SC2034
+source-path=SCRIPTDIR

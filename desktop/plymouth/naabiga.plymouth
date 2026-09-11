@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Naabiga OS
+Description=Écran de démarrage Naabiga OS — logo et barre de progression aux couleurs NAABIGA
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/naabiga
+ScriptFile=/usr/share/plymouth/themes/naabiga/naabiga.script

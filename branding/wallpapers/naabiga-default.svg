@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Naabiga OS — fond d'écran par défaut (vectoriel, 16:9). Couleurs NAABIGA : noir #111111, or #D4AF37, rouge #D62828, vert #198754 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#151515"/>
+      <stop offset="1" stop-color="#0B0B0B"/>
+    </linearGradient>
+    <radialGradient id="glowRed" cx="0.78" cy="0.28" r="0.5">
+      <stop offset="0" stop-color="#D62828" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#D62828" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowGold" cx="0.2" cy="0.85" r="0.55">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D4AF37"/>
+      <stop offset="0.5" stop-color="#D62828"/>
+      <stop offset="1" stop-color="#198754"/>
+    </linearGradient>
+  </defs>
+  <rect width="3840" height="2160" fill="url(#bg)"/>
+  <rect width="3840" height="2160" fill="url(#glowRed)"/>
+  <rect width="3840" height="2160" fill="url(#glowGold)"/>
+  <!-- Grille discrète : rappel de l'ordre et du code -->
+  <g stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="2">
+    <path d="M0 540H3840M0 1080H3840M0 1620H3840M960 0V2160M1920 0V2160M2880 0V2160"/>
+  </g>
+  <!-- Arc géométrique : chevron « N » stylisé -->
+  <g fill="none" stroke="url(#stroke)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <path d="M2380 1560 L2380 720 L2980 1560 L2980 720"/>
+  </g>
+  <g fill="none" stroke="#D4AF37" stroke-opacity="0.18" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2300 1640 L2300 640 L3060 1640 L3060 640"/>
+  </g>
+  <!-- Points d'accent -->
+  <circle cx="2380" cy="720" r="26" fill="#D4AF37"/>
+  <circle cx="2980" cy="1560" r="26" fill="#D62828"/>
+  <circle cx="2980" cy="720" r="18" fill="#198754"/>
+  <!-- Signature -->
+  <text x="200" y="1960" font-family="Poppins, Inter, sans-serif" font-weight="700" font-size="64" fill="#FFFFFF" fill-opacity="0.9">Naabiga OS</text>
+  <text x="200" y="2030" font-family="Inter, sans-serif" font-size="36" fill="#D4AF37" fill-opacity="0.85" letter-spacing="4">BUILD FASTER. CREATE SMARTER.</text>
+</svg>

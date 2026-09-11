@@ -1,0 +1,26 @@
+name: "✨ Fonctionnalité"
+description: Proposer une amélioration ou un nouvel outil
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème ou besoin
+      description: Quel problème de développeur cette fonctionnalité résout-elle ?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution proposée
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Composant
+      options: [nos CLI, nos doctor, nos sdk, nos ai, N-OS Center, ISO, Installateur, Bureau, Paquets, Documentation, Infrastructure]
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives envisagées

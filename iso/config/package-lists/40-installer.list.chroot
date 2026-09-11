@@ -1,0 +1,10 @@
+# Installateur Calamares
+calamares
+calamares-settings-ubuntu-common
+cryptsetup
+cryptsetup-initramfs
+dosfstools
+e2fsprogs
+btrfs-progs
+ntfs-3g
+gparted

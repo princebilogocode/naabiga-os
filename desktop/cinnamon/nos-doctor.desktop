@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=N-OS Doctor
+Comment=Diagnostic de l'environnement de développement
+Comment[fr]=Diagnostic de l'environnement de développement
+Exec=gnome-terminal --title="N-OS Doctor" -- bash -c "nos doctor; echo; read -r -p 'Appuyez sur Entrée pour fermer'"
+Icon=naabiga-os
+Terminal=false
+Categories=System;Development;
+Keywords=nos;doctor;diagnostic;flutter;android;java;docker;

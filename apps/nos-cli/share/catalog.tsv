@@ -1,0 +1,70 @@
+# Catalogue des outils N-OS — colonnes séparées par des tabulations
+# id	catégorie	description	méthode	spec	exécutable
+git	Base	Gestion de versions Git	apt	git	git
+curl	Base	Client HTTP curl	apt	curl	curl
+wget	Base	Téléchargeur wget	apt	wget	wget
+openssh	Base	Client et serveur OpenSSH	apt	openssh-client openssh-server	ssh
+build-essential	Base	GCC, Make, bibliothèques de compilation	apt	build-essential	gcc
+clang	Base	Compilateur Clang/LLVM	apt	clang	clang
+cmake	Base	Système de build CMake	apt	cmake	cmake
+ffmpeg	Base	Traitement audio/vidéo FFmpeg	apt	ffmpeg	ffmpeg
+vscode	IDE	Visual Studio Code	script	install-vscode.sh	code
+android-studio	IDE	Android Studio (IDE Android officiel)	script	install-android-studio.sh	studio.sh
+java	Langages	OpenJDK 17 LTS	sdk	java 17	java
+kotlin	Langages	Compilateur Kotlin	script	install-kotlin.sh	kotlinc
+flutter	Langages	Flutter SDK stable (inclut Dart)	sdk	flutter stable	flutter
+android-sdk	Langages	Android SDK (cmdline-tools, platform-tools, build-tools)	sdk	android latest	sdkmanager
+node	Langages	Node.js LTS + npm	sdk	node lts	node
+pnpm	Langages	Gestionnaire de paquets pnpm	npm	pnpm	pnpm
+yarn	Langages	Gestionnaire de paquets Yarn	npm	yarn	yarn
+python	Langages	Python 3, pip, venv	apt	python3 python3-pip python3-venv pipx	python3
+php	Langages	PHP 8 CLI et extensions courantes	apt	php-cli php-mbstring php-xml php-curl php-zip php-sqlite3	php
+composer	Langages	Composer (PHP)	apt	composer	composer
+go	Langages	Go	apt	golang-go	go
+rust	Langages	Rust via rustup (rustc, cargo)	script	install-rust.sh	rustc
+docker	DevOps	Docker Engine + Docker Compose	script	install-docker.sh	docker
+nginx	DevOps	Serveur web Nginx	apt	nginx	nginx
+apache	DevOps	Serveur web Apache	apt	apache2	apache2
+postgresql-client	Bases de données	Client PostgreSQL (psql)	apt	postgresql-client	psql
+sqlite	Bases de données	SQLite 3	apt	sqlite3	sqlite3
+redis-cli	Bases de données	Client Redis	apt	redis-tools	redis-cli
+playwright	Tests	Playwright (navigateurs de test)	script	install-playwright.sh	playwright
+chrome	Navigateurs	Google Chrome (propriétaire)	script	install-chrome.sh	google-chrome
+firefox	Navigateurs	Mozilla Firefox (Flatpak)	flatpak	org.mozilla.firefox	firefox
+claude	IA	Claude Code (Anthropic)	ai	claude	claude
+gemini	IA	Gemini CLI (Google)	ai	gemini	gemini
+ollama	IA	Ollama (modèles locaux)	ai	ollama	ollama
+aider	IA	Aider (pair-programming IA)	ai	aider	aider
+opencode	IA	OpenCode	ai	opencode	opencode
+continue	IA	Continue (extension VS Code)	ai	continue	code
+copilot	IA	GitHub Copilot CLI	ai	copilot	copilot
+libreoffice	Bureautique	LibreOffice complet (Writer, Calc, Impress, Draw, Base, Math) en français	apt	libreoffice libreoffice-l10n-fr libreoffice-help-fr	libreoffice
+onlyoffice	Bureautique	ONLYOFFICE Desktop Editors (compatibilité Office)	flatpak	org.onlyoffice.desktopeditors	onlyoffice
+thunderbird	Bureautique	Client de messagerie et agenda Thunderbird	apt	thunderbird thunderbird-locale-fr	thunderbird
+pdf-tools	Bureautique	Outils PDF : PDF Arranger, OCRmyPDF (Tesseract fr), Evince	apt	pdfarranger ocrmypdf tesseract-ocr-fra evince qpdf	pdfarranger
+scanner	Bureautique	Scanner (Simple Scan, SANE, AirScan) et impression (CUPS, HPLIP)	apt	simple-scan sane-airscan cups system-config-printer hplip	simple-scan
+keepassxc	Bureautique	Gestionnaire de mots de passe KeePassXC	apt	keepassxc	keepassxc
+nextcloud	Bureautique	Client de synchronisation Nextcloud	apt	nextcloud-desktop	nextcloud
+gimp	Bureautique	Retouche d'images GIMP	apt	gimp	gimp
+inkscape	Bureautique	Dessin vectoriel Inkscape	apt	inkscape	inkscape
+zoom	Bureautique	Visioconférence Zoom (propriétaire, Flatpak)	flatpak	us.zoom.Zoom	zoom
+teams	Bureautique	Microsoft Teams (client non officiel Teams for Linux, Flatpak)	flatpak	com.github.IsmaelMartinez.teams_for_linux	teams-for-linux
+latex	Enseignement	LaTeX (TeX Live recommandé + français) et TeXstudio	apt	texlive-latex-recommended texlive-latex-extra texlive-lang-french texlive-fonts-recommended texlive-science texlive-bibtex-extra biber latexmk texstudio	pdflatex
+jupyter	Enseignement	JupyterLab (Python scientifique)	pipx	jupyterlab	jupyter-lab
+r-base	Enseignement	R et paquets de base	apt	r-base r-base-dev r-cran-tidyverse	R
+octave	Enseignement	GNU Octave (calcul numérique)	apt	octave octave-doc	octave
+zotero	Enseignement	Gestion bibliographique Zotero (Flatpak)	flatpak	org.zotero.Zotero	zotero
+geogebra	Enseignement	GeoGebra (mathématiques dynamiques, Flatpak)	flatpak	org.geogebra.GeoGebra	geogebra
+obs-studio	Enseignement	OBS Studio (enregistrement de cours, streaming)	apt	obs-studio	obs
+xournalpp	Enseignement	Xournal++ (annotation de PDF, tableau blanc)	apt	xournalpp	xournalpp
+anki	Enseignement	Anki (révision par cartes, Flatpak)	flatpak	net.ankiweb.Anki	anki
+calibre	Enseignement	Calibre (bibliothèque numérique, ebooks)	apt	calibre	calibre
+veyon	Enseignement	Veyon (supervision et gestion de salle informatique)	apt	veyon-master veyon-service veyon-configurator	veyon-master
+moodle-desktop	Enseignement	Moodle Desktop (accès hors ligne aux cours, Flatpak)	flatpak	org.moodle.moodledesktop	moodledesktop
+remmina	Administration	Remmina (bureau à distance RDP, VNC, SSH)	apt	remmina remmina-plugin-rdp remmina-plugin-vnc	remmina
+gnucash	Administration	GnuCash (comptabilité)	apt	gnucash	gnucash
+backup	Administration	Sauvegardes Déjà Dup + Timeshift (instantanés système)	apt	deja-dup timeshift	deja-dup
+clamav	Administration	Antivirus ClamAV (analyse planifiée)	apt	clamav clamav-daemon clamtk	clamscan
+ad-join	Administration	Intégration Active Directory / LDAP (realmd, sssd, adcli)	apt	realmd sssd sssd-tools adcli samba-common-bin libnss-sss libpam-sss krb5-user packagekit	realm
+inventory	Administration	Agent d'inventaire de parc (FusionInventory / GLPI)	apt	fusioninventory-agent	fusioninventory-agent
+signal	Administration	Signal Desktop (messagerie chiffrée, Flatpak)	flatpak	org.signal.Signal	signal-desktop

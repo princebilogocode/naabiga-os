@@ -1,0 +1,88 @@
+site_name: Naabiga OS
+site_description: Documentation officielle de Naabiga OS (N-OS), la distribution Linux des développeurs — ICONEDOR × Université Aube Nouvelle (Bobo-Dioulasso)
+site_url: https://princebilogocode.github.io/naabiga-os/
+repo_url: https://github.com/princebilogocode/naabiga-os
+repo_name: princebilogocode/naabiga-os
+edit_uri: edit/main/docs/
+copyright: "© 2026 ICONEDOR — Burkina Faso. Documentation sous GPL-3.0."
+
+theme:
+  name: material
+  language: fr
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Mode sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Mode clair
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang: fr
+
+nav:
+  - Accueil: index.md
+  - Vision:
+      - Cahier des charges: vision/cahier-des-charges.md
+      - Spécification maîtresse v2: vision/master-specification.md
+      - Charte du projet: vision/project-charter.md
+  - Architecture:
+      - Document d'architecture (SAD): architecture/software-architecture-document.md
+      - Blueprint d'ingénierie: architecture/engineering-blueprint.md
+      - Décisions (ADR): architecture/decisions.md
+  - Guide (handbook):
+      - Démarrer: handbook/getting-started.md
+      - N-OS CLI: handbook/nos-cli.md
+      - N-OS Doctor: handbook/nos-doctor.md
+      - N-OS SDK Manager: handbook/nos-sdk.md
+      - N-OS AI Hub: handbook/nos-ai.md
+      - Catalogue d'outils: handbook/tools.md
+      - Profils (bureautique, enseignement, administration): handbook/profiles.md
+      - Construire l'ISO: handbook/build-iso.md
+      - Équipes: handbook/teams.md
+      - Programme étudiant U-AUBEN: handbook/student-program.md
+      - Marque et licence: handbook/trademark.md
+  - Bureau: desktop/index.md
+  - Installateur: installer/index.md
+  - Packaging: packaging/index.md
+  - Sécurité: security/index.md
+  - Qualité (QA): qa/index.md
+  - Roadmap: roadmap/roadmap.md

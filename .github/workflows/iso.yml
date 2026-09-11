@@ -1,0 +1,73 @@
+name: ISO
+
+on:
+  workflow_dispatch:
+    inputs:
+      skip_heavy:
+        description: "Ignorer Flutter/Node/VS Code (build de test rapide)"
+        type: boolean
+        default: false
+      mirror:
+        description: "Miroir Ubuntu"
+        default: "http://archive.ubuntu.com/ubuntu/"
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  iso:
+    name: Construire l'ISO (Ubuntu 24.04, live-build)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Libérer de l'espace disque
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          sudo docker image prune -af >/dev/null 2>&1 || true
+          df -h /
+
+      - name: Installer live-build et dépendances
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y live-build debootstrap xorriso squashfs-tools isolinux syslinux-common \
+            grub-efi-amd64-bin grub-pc-bin mtools dosfstools dpkg-dev fakeroot imagemagick qemu-utils
+
+      - name: Construire les paquets
+        run: make packages
+
+      - name: Construire l'ISO
+        env:
+          NOS_MIRROR: ${{ github.event.inputs.mirror || 'http://archive.ubuntu.com/ubuntu/' }}
+          NOS_SKIP_VSCODE: ${{ github.event.inputs.skip_heavy == 'true' && '1' || '0' }}
+          NOS_SKIP_FLUTTER: ${{ github.event.inputs.skip_heavy == 'true' && '1' || '0' }}
+          NOS_SKIP_NODE: ${{ github.event.inputs.skip_heavy == 'true' && '1' || '0' }}
+        run: sudo -E bash build/build-iso.sh
+
+      - name: Résumé
+        run: |
+          ls -lh build/out/*.iso build/out/*.sha256
+          { echo "## ISO Naabiga OS"; echo; echo '```'; cat build/out/*.sha256; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: naabiga-os-iso
+          path: |
+            build/out/*.iso
+            build/out/*.sha256
+            build/out/*.log
+          retention-days: 7
+
+      - name: Release GitHub (tags)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/out/*.iso
+            build/out/*.sha256
+            build/out/packages/*.deb
+          generate_release_notes: true
+          prerelease: ${{ contains(github.ref, 'alpha') || contains(github.ref, 'beta') || contains(github.ref, 'rc') }}
