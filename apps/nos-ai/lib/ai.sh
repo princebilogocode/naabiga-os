@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# N-OS AI Hub — installation et gestion des assistants IA
-# Copyright (C) 2026 ICONEDOR — Burkina Faso
+# N-OS AI Hub : installation et gestion des assistants IA
+# Copyright (C) 2026 ICONEDOR, Burkina Faso
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # id | nom | exécutable | méthode | spec

@@ -3,7 +3,7 @@
 #   nos-cli       : CLI, Doctor, SDK Manager, AI Hub
 #   nos-branding  : logo, fonds d'écran, Plymouth, GRUB, /etc/nos-release
 #   nos-desktop   : réglages Cinnamon par défaut (dconf), thème
-#   nos-base      : métapaquet — dépendances de la plateforme de développement + scripts système
+#   nos-base      : métapaquet, dépendances de la plateforme de développement + scripts système
 # Usage : bash build/build-packages.sh        (sortie : build/out/packages/*.deb)
 #         OUT=/chemin bash build/build-packages.sh
 # SPDX-License-Identifier: GPL-3.0-or-later

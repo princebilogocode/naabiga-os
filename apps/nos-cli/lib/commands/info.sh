@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos info — informations système (texte ou --json pour N-OS Center)
+# nos info : informations système (texte ou --json pour N-OS Center)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 INFO_TOOLS=(

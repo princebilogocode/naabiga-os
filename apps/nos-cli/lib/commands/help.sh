@@ -45,6 +45,6 @@ ${C_BOLD}Variables :${C_RESET}
   NOS_DRY_RUN=1        Afficher les commandes sans les exécuter
   NO_COLOR=1           Désactiver les couleurs
 
-Documentation : https://github.com/princebilogocode/naabiga-os
+Site : https://naabiga.com  ·  Code et documentation : https://github.com/princebilogocode/naabiga-os
 EOF
 }

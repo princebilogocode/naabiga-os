@@ -12,7 +12,7 @@ check_php() {
   local v
   v="$(php -r 'echo PHP_VERSION;' 2>/dev/null | tr -d '\r')"
   if ! nos_has composer; then
-    doctor_result warn "PHP $v — Composer absent" "nos install composer"
+    doctor_result warn "PHP $v : Composer absent" "nos install composer"
     return
   fi
   local missing=() ext
@@ -20,7 +20,7 @@ check_php() {
     php -m 2>/dev/null | grep -qi "^$ext$" || missing+=("$ext")
   done
   if [ "${#missing[@]}" -gt 0 ]; then
-    doctor_result warn "PHP $v — extensions manquantes : ${missing[*]}" "nos install php"
+    doctor_result warn "PHP $v : extensions manquantes : ${missing[*]}" "nos install php"
     return
   fi
   doctor_result ok "PHP $v, Composer $(composer --version 2>/dev/null | awk '{print $3}' | tr -d '\r')"

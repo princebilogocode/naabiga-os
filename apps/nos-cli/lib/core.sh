@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# core.sh — fonctions communes de la CLI nos
+# core.sh : fonctions communes de la CLI nos
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 NOS_NAME="Naabiga OS"
@@ -181,5 +181,5 @@ nos_banner() {
                              |___/
 EOF
   printf '%s' "$C_RESET"
-  printf '  %sBuild Faster. Create Smarter.%s  —  v%s\n\n' "$C_DIM" "$C_RESET" "$(nos_version)"
+  printf '  %sBuild Faster. Create Smarter.%s  :  v%s\n\n' "$C_DIM" "$C_RESET" "$(nos_version)"
 }

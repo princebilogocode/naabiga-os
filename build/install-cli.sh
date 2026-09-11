@@ -45,7 +45,7 @@ install_all() {
 
   # Le binaire installé appelle 'nos doctor' quand il est invoqué comme nos-doctor
   cat > "$PROFILED/nos.sh" <<'EOF'
-# Naabiga OS — environnement de développement utilisateur
+# Naabiga OS : environnement de développement utilisateur
 [ -f "$HOME/.nos/env.sh" ] && . "$HOME/.nos/env.sh"
 EOF
   chmod 0644 "$PROFILED/nos.sh"

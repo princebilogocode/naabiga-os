@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Optimisations N-OS — profil Administration (administration publique, collectivités, entreprises, ONG)
+# Optimisations N-OS : profil Administration (administration publique, collectivités, entreprises, ONG)
 # Durcissement, sauvegardes, antivirus, inventaire, politiques dconf, préparation à l'intégration AD
 # Exécuté en root par : nos profile apply administration
 # SPDX-License-Identifier: GPL-3.0-or-later
@@ -34,7 +34,7 @@ EOF
 # Verrouillage automatique et politiques dconf verrouillées (l'utilisateur ne peut pas les changer)
 $SUDO mkdir -p /etc/dconf/db/local.d/locks
 $SUDO tee /etc/dconf/db/local.d/30-naabiga-administration >/dev/null <<'EOF'
-# Naabiga OS — profil Administration
+# Naabiga OS : profil Administration
 [org/cinnamon]
 favorite-apps=['nemo.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'thunderbird.desktop', 'firefox.desktop', 'org.remmina.Remmina.desktop', 'keepassxc.desktop', 'simple-scan.desktop', 'nos-center.desktop', 'cinnamon-settings.desktop']
 
@@ -61,7 +61,7 @@ $SUDO dconf update 2>/dev/null || true
 USB_RO="$(sudo -u "${SUDO_USER:-$(id -un)}" bash -c 'grep -E "^usb-readonly=" "${XDG_CONFIG_HOME:-$HOME/.config}/nos/config" 2>/dev/null | cut -d= -f2' 2>/dev/null || true)"
 if [ "$USB_RO" = "1" ]; then
   $SUDO tee /etc/udev/rules.d/80-naabiga-usb-readonly.rules >/dev/null <<'EOF'
-# Naabiga OS — stockage USB en lecture seule (profil Administration)
+# Naabiga OS : stockage USB en lecture seule (profil Administration)
 ACTION=="add", SUBSYSTEMS=="usb", SUBSYSTEM=="block", ATTR{ro}="1"
 EOF
   $SUDO udevadm control --reload-rules 2>/dev/null || true

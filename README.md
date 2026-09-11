@@ -18,6 +18,10 @@
   <img src="https://img.shields.io/badge/version-1.0.0--alpha.1-198754" alt="Version">
 </p>
 
+<p align="center">
+  <a href="https://naabiga.com">naabiga.com</a> · <a href="https://princebilogocode.github.io/naabiga-os/">Documentation</a> · <a href="https://github.com/princebilogocode/naabiga-os/issues">Support</a>
+</p>
+
 ---
 
 ## Qu'est-ce que Naabiga OS ?
@@ -28,7 +32,7 @@
 
 N-OS ne réinvente pas Linux. Le projet construit sur un socle Linux LTS éprouvé une couche cohérente d'outils, d'intégration et de qualité : SDK préinstallés, diagnostic automatique, gestionnaire de versions, assistants IA, bureau Cinnamon personnalisé et expérience **francophone par défaut**.
 
-N-OS fait partie de l'écosystème **[NAABIGA](branding/charte-graphique-naabiga.md)**, un ensemble de services numériques africains (AI, Store, Cloud, Pay, Maps, Docs, OS…).
+N-OS fait partie de l'écosystème **[NAABIGA](https://naabiga.com)**, un ensemble de services numériques africains (AI, Store, Cloud, Pay, Maps, Docs, OS…). Charte graphique : [branding/charte-graphique-naabiga.md](branding/charte-graphique-naabiga.md).
 
 ## Développé par
 

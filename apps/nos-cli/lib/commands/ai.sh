@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos ai — délègue à N-OS AI Hub
+# nos ai : délègue à N-OS AI Hub
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 cmd_ai() {

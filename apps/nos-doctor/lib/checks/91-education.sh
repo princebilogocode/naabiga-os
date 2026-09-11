@@ -30,7 +30,7 @@ check_education() {
     doctor_result warn "mode salle de TP demandé mais compte 'etudiant' absent" "sudo bash $NOS_SCRIPTS/profiles/education.sh"
     return
   fi
-  doctor_result ok "LaTeX, Jupyter, R, Octave, Xournal++ présents$([ "$classroom" = 1 ] && printf ' — salle de TP active')"
+  doctor_result ok "LaTeX, Jupyter, R, Octave, Xournal++ présents$([ "$classroom" = 1 ] && printf ' : salle de TP active')"
 }
 
 repair_education() {

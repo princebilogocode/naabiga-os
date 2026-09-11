@@ -17,7 +17,7 @@ strings:
   versionedName: "Naabiga OS 1.0.0-alpha.1 (Bobo)"
   shortVersionedName: "N-OS 1.0"
   bootloaderEntryName: "Naabiga OS"
-  productUrl: "https://github.com/princebilogocode/naabiga-os"
+  productUrl: "https://naabiga.com"
   supportUrl: "https://github.com/princebilogocode/naabiga-os/issues"
   knownIssuesUrl: "https://github.com/princebilogocode/naabiga-os/issues?q=label%3Aknown-issue"
   releaseNotesUrl: "https://github.com/princebilogocode/naabiga-os/blob/main/CHANGELOG.md"

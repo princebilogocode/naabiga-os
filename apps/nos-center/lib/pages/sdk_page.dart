@@ -1,4 +1,4 @@
-// Page SDK — versions de Flutter, Java, Node.js, Android SDK
+// Page SDK : versions de Flutter, Java, Node.js, Android SDK
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import 'package:flutter/material.dart';

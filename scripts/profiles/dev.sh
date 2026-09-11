@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Optimisations N-OS — profil Développement (= optimisations système standard)
+# Optimisations N-OS : profil Développement (= optimisations système standard)
 # Exécuté en root par : nos profile apply dev
 # SPDX-License-Identifier: GPL-3.0-or-later
 set -uo pipefail

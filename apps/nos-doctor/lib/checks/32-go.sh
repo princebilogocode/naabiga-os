@@ -14,7 +14,7 @@ check_go() {
   local in_path=1
   case ":$PATH:" in *":$HOME/go/bin:"*) in_path=1 ;; *) in_path=0 ;; esac
   if [ -d "$HOME/go/bin" ] && [ "$in_path" = 0 ]; then
-    doctor_result warn "$v — \$HOME/go/bin absent du PATH" "echo 'export PATH=\"\$HOME/go/bin:\$PATH\"' >> ~/.nos/env.sh"
+    doctor_result warn "$v : \$HOME/go/bin absent du PATH" "echo 'export PATH=\"\$HOME/go/bin:\$PATH\"' >> ~/.nos/env.sh"
     return
   fi
   doctor_result ok "$v"

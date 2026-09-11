@@ -33,5 +33,5 @@ Le dépôt ne doit contenir **aucune clé API, jeton, mot de passe, clé privée
 ## À venir
 
 - Vérification SHA256 des archives SDK dans `nos-core` (Rust).
-- Signature des paquets et du dépôt `repo.naabiga.org`.
+- Signature des paquets et du dépôt `repo.naabiga.com`.
 - Durcissement optionnel « poste partagé » (`nos config set profile shared`) : pas de groupe docker, auto-lock 2 min, USB restreint.

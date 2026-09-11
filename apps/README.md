@@ -1,4 +1,4 @@
-# apps/ — applications officielles N-OS
+# apps/ : applications officielles N-OS
 
 | Application | Dossier | Langage | Commande | État |
 |---|---|---|---|---|

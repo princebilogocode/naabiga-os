@@ -10,7 +10,7 @@ HOOKS="$ROOT/.git/hooks"
 
 cat > "$HOOKS/pre-commit" <<'EOF'
 #!/usr/bin/env bash
-# Naabiga OS — hook pre-commit
+# Naabiga OS : hook pre-commit
 set -uo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 bash "$ROOT/scripts/check-secrets.sh" --staged || exit 1

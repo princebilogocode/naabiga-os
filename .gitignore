@@ -60,7 +60,7 @@ Thumbs.db
 *.swp
 docs/assets/logo.png
 
-# Secrets — jamais versionnés (voir scripts/check-secrets.sh et docs/security)
+# Secrets : jamais versionnés (voir scripts/check-secrets.sh et docs/security)
 .env
 .env.*
 *.env

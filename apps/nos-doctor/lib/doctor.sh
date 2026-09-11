@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# N-OS Doctor — diagnostic et réparation de l'environnement de développement
-# Copyright (C) 2026 ICONEDOR — Burkina Faso
+# N-OS Doctor : diagnostic et réparation de l'environnement de développement
+# Copyright (C) 2026 ICONEDOR, Burkina Faso
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Chaque vérification vit dans checks/<id>.sh et définit :
@@ -64,7 +64,7 @@ doctor_status_icon() {
 doctor_print_text() {
   local i n_ok=0 n_warn=0 n_fail=0 current_cat=""
   nos_banner
-  printf '%sN-OS Doctor%s — %s — %s\n' "$C_BOLD" "$C_RESET" "$(nos_os_pretty)" "$(date '+%Y-%m-%d %H:%M')"
+  printf '%sN-OS Doctor%s, %s, %s\n' "$C_BOLD" "$C_RESET" "$(nos_os_pretty)" "$(date '+%Y-%m-%d %H:%M')"
   for i in "${!DOCTOR_IDS[@]}"; do
     if [ "${DOCTOR_CATEGORIES[$i]}" != "$current_cat" ]; then
       current_cat="${DOCTOR_CATEGORIES[$i]}"
@@ -179,7 +179,7 @@ EOF
   cat <<EOF
 </tbody>
 </table>
-<footer>Naabiga OS — ICONEDOR × Université Aube Nouvelle (Bobo-Dioulasso) · Build Faster. Create Smarter.</footer>
+<footer><a href="https://naabiga.com" style="color:#D62828">naabiga.com</a> · Naabiga OS : ICONEDOR × Université Aube Nouvelle (Bobo-Dioulasso) · Build Faster. Create Smarter.</footer>
 </main>
 </body>
 </html>

@@ -6,7 +6,7 @@ SUDO=""; [ "$(id -u)" -ne 0 ] && SUDO="sudo"
 
 # Ordonnanceur : none pour NVMe, mq-deadline pour SSD SATA, bfq pour disques rotatifs
 $SUDO tee /etc/udev/rules.d/60-naabiga-scheduler.rules >/dev/null <<'EOF'
-# Naabiga OS — ordonnanceurs d'E/S
+# Naabiga OS : ordonnanceurs d'E/S
 ACTION=="add|change", KERNEL=="nvme[0-9]*", ATTR{queue/scheduler}="none"
 ACTION=="add|change", KERNEL=="sd[a-z]|mmcblk[0-9]*", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="mq-deadline"
 ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="bfq"

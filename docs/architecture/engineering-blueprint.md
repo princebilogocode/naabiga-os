@@ -3,7 +3,7 @@
 # Master Engineering Blueprint
 ## Version 1.0
 
-**Projet porté par : ICONEDOR – Burkina Faso**
+**Projet porté par : ICONEDOR - Burkina Faso**
 
 ---
 
@@ -267,17 +267,17 @@ Pipeline :
 
 Services :
 
-repo.naabiga.org
+repo.naabiga.com
 
-downloads.naabiga.org
+downloads.naabiga.com
 
-docs.naabiga.org
+docs.naabiga.com
 
-status.naabiga.org
+status.naabiga.com
 
-packages.naabiga.org
+packages.naabiga.com
 
-build.naabiga.org
+build.naabiga.com
 
 ---
 

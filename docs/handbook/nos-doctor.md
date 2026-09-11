@@ -31,9 +31,9 @@ nos doctor --list          # vérifications disponibles
 | `env_vars` | Environnement | `JAVA_HOME`, `ANDROID_HOME`, `FLUTTER_ROOT` valides | régénère `~/.nos/env.sh` |
 | `nos_env` | Environnement | `~/.nos/env.sh` présent et chargé | crée et ajoute au `.bashrc` |
 | `vscode` | IDE | VS Code présent | installe VS Code |
-| `disk` | Système | ≥ 20 Go libres recommandés | — |
+| `disk` | Système | ≥ 20 Go libres recommandés | aucune |
 | `security` | Système | UFW actif, mises à jour automatiques | active UFW |
-| `ai` | IA | au moins un assistant | — |
+| `ai` | IA | au moins un assistant | aucune |
 | `office` | Bureautique | LibreOffice, français, polices Office, CUPS (bloquant si un profil bureautique/education/administration est appliqué) | installe LibreOffice fr + CUPS |
 | `education` | Profils | LaTeX, Jupyter, R, Octave, Xournal++, compte salle de TP (bloquant si le profil education est appliqué) | `nos profile apply education` |
 | `administration` | Profils | ClamAV, Déjà Dup, Remmina, realmd, durcissement sudo/dconf (bloquant si le profil administration est appliqué) | `nos profile apply administration` |

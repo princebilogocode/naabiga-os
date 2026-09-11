@@ -1,6 +1,6 @@
 #!/bin/sh
 # Hook chroot : outils de développement non disponibles dans les dépôts du socle
-# (VS Code, Flutter, Node.js LTS) — installés dans /opt pour l'image, activés par nos sdk
+# (VS Code, Flutter, Node.js LTS) : installés dans /opt pour l'image, activés par nos sdk
 set -e
 
 echo "== [N-OS] Outils de développement"
@@ -46,7 +46,7 @@ fi
 
 # --- Profil système : PATH des SDK de l'image -------------------------------------
 cat > /etc/profile.d/nos-sdk.sh <<'EOF'
-# Naabiga OS — SDK système (/opt/nos/sdk). L'utilisateur peut les remplacer avec : nos sdk use …
+# Naabiga OS : SDK système (/opt/nos/sdk). L'utilisateur peut les remplacer avec : nos sdk use …
 [ -d /opt/nos/sdk/flutter/current/bin ] && export FLUTTER_ROOT="/opt/nos/sdk/flutter/current" && export PATH="$FLUTTER_ROOT/bin:$FLUTTER_ROOT/bin/cache/dart-sdk/bin:$PATH"
 [ -d /opt/nos/sdk/node/current/bin ] && export PATH="/opt/nos/sdk/node/current/bin:$PATH"
 [ -d /usr/lib/jvm/java-17-openjdk-amd64 ] && export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"

@@ -1,4 +1,4 @@
-// Page Profils — dev, bureautique, enseignement supérieur, administration
+// Page Profils : dev, bureautique, enseignement supérieur, administration
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import 'package:flutter/material.dart';

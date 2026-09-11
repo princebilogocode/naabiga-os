@@ -15,7 +15,7 @@ check_rust() {
   fi
   local v
   v="$(rustc --version 2>/dev/null | tr -d '\r')"
-  nos_has cargo || { doctor_result warn "$v — cargo absent" "nos install rust"; return; }
+  nos_has cargo || { doctor_result warn "$v : cargo absent" "nos install rust"; return; }
   doctor_result ok "$v, $(cargo --version 2>/dev/null | tr -d '\r')"
 }
 

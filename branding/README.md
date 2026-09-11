@@ -1,4 +1,4 @@
-# branding/ — identité visuelle de Naabiga OS
+# branding/ : identité visuelle de Naabiga OS
 
 **Naabiga OS est le premier système d'exploitation conçu par des Burkinabè, pour les Burkinabè et pour l'Afrique.** Une fierté nationale portée par ICONEDOR et les étudiants de l'Université Aube Nouvelle de Bobo-Dioulasso.
 

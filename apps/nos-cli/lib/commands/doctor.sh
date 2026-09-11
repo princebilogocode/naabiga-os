@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos doctor — délègue à N-OS Doctor
+# nos doctor : délègue à N-OS Doctor
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 cmd_doctor() {

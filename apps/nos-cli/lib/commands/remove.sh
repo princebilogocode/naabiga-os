@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos remove — désinstalle des outils du catalogue
+# nos remove : désinstalle des outils du catalogue
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 remove_one() {

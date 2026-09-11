@@ -14,7 +14,7 @@ check_git() {
   name="$(git config --global user.name 2>/dev/null || true)"
   email="$(git config --global user.email 2>/dev/null || true)"
   if [ -z "$name" ] || [ -z "$email" ]; then
-    doctor_result warn "git $v — identité non configurée" "git config --global user.name \"Nom\" && git config --global user.email \"vous@exemple.com\""
+    doctor_result warn "git $v : identité non configurée" "git config --global user.name \"Nom\" && git config --global user.email \"vous@exemple.com\""
   else
     doctor_result ok "git $v ($name <$email>)"
   fi

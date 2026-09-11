@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos welcome — assistant de premier démarrage : profil, IDE, assistants IA, diagnostic
+# nos welcome : assistant de premier démarrage : profil, IDE, assistants IA, diagnostic
 # Interactif (whiptail) ou non interactif (--profile, --ide, --ai, --yes)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -104,19 +104,19 @@ cmd_welcome() {
   fi
 
   nos_banner
-  printf '%sBienvenue sur Naabiga OS%s — le premier système d'\''exploitation burkinabè, pour le Burkina et l'\''Afrique.\n' "$C_BOLD" "$C_RESET"
+  printf '%sBienvenue sur Naabiga OS%s : le premier système d'\''exploitation burkinabè, pour le Burkina et l'\''Afrique.\n' "$C_BOLD" "$C_RESET"
   printf 'Cet assistant prépare votre poste en quelques questions. Rien n'\''est installé sans votre accord.\n\n'
 
   if welcome_has_tui; then
-    profiles="$(welcome_checklist "Naabiga OS — Profil d'usage" "À quoi servira ce poste ? (Espace pour cocher)" \
+    profiles="$(welcome_checklist "Naabiga OS : Profil d'usage" "À quoi servira ce poste ? (Espace pour cocher)" \
       "dev|Développement : Flutter, Android, Web, DevOps, IA|on" \
       "bureautique|Bureautique : LibreOffice, PDF, courriel, impression|off" \
       "education|Enseignement supérieur : LaTeX, Jupyter, R, salle de TP|off" \
       "administration|Administration : poste durci, sauvegardes, AD|off")"
-    ides="$(welcome_checklist "Naabiga OS — IDE" "Environnements de développement à installer" \
+    ides="$(welcome_checklist "Naabiga OS : IDE" "Environnements de développement à installer" \
       "vscode|Visual Studio Code|on" \
       "android-studio|Android Studio (~1 Go)|off")"
-    ais="$(welcome_checklist "Naabiga OS — Assistants IA" "Assistants IA à installer (compte requis pour certains)" \
+    ais="$(welcome_checklist "Naabiga OS : Assistants IA" "Assistants IA à installer (compte requis pour certains)" \
       "claude|Claude Code (Anthropic)|on" \
       "gemini|Gemini CLI (Google)|off" \
       "ollama|Ollama : modèles locaux, hors ligne|off" \
@@ -124,7 +124,7 @@ cmd_welcome() {
       "opencode|OpenCode|off" \
       "continue|Continue (extension VS Code)|off" \
       "copilot|GitHub Copilot CLI|off")"
-    if whiptail --title "Naabiga OS — Diagnostic" --yesno "Lancer 'nos doctor' à la fin pour vérifier l'installation ?" 10 60; then do_doctor=1; else do_doctor=0; fi
+    if whiptail --title "Naabiga OS : Diagnostic" --yesno "Lancer 'nos doctor' à la fin pour vérifier l'installation ?" 10 60; then do_doctor=1; else do_doctor=0; fi
   else
     profiles="$(welcome_ask_plain "Profils (dev bureautique education administration)" "dev")"
     ides="$(welcome_ask_plain "IDE (vscode android-studio, vide pour aucun)" "vscode")"

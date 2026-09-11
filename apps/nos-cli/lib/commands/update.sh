@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos update — met à jour le système, les SDK et les assistants IA ; --check compare avec la dernière version N-OS
+# nos update : met à jour le système, les SDK et les assistants IA ; --check compare avec la dernière version N-OS
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 NOS_RELEASES_API="${NOS_RELEASES_API:-https://api.github.com/repos/princebilogocode/naabiga-os/releases/latest}"

@@ -4,9 +4,9 @@
 
 ## Type
 
-- [ ] feat — nouvelle fonctionnalité
-- [ ] fix — correction
-- [ ] docs — documentation
+- [ ] feat : nouvelle fonctionnalité
+- [ ] fix : correction
+- [ ] docs : documentation
 - [ ] refactor / style / test / build / ci / chore
 
 ## Composant

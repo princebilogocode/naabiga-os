@@ -25,7 +25,7 @@ sudo apt install ./build/out/packages/nos-cli_*.deb
 ## Dépôts officiels (phase RC)
 
 ```text
-repo.naabiga.org/
+repo.naabiga.com/
 ├── dists/{stable,testing,unstable,nightly}
 └── pool/
 ```

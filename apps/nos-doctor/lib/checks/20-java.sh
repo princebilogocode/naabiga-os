@@ -13,16 +13,16 @@ check_java() {
   raw="$(java -version 2>&1 | head -n 1 | tr -d '\r')"
   major="$(printf '%s' "$raw" | sed -E 's/.*"([0-9]+)(\.[0-9]+)*.*/\1/')"
   if ! nos_has javac; then
-    doctor_result warn "$raw — javac absent (JRE seul)" "nos sdk install java 17"
+    doctor_result warn "$raw : javac absent (JRE seul)" "nos sdk install java 17"
     return
   fi
   if [ -z "${JAVA_HOME:-}" ]; then
-    doctor_result warn "$raw — JAVA_HOME non défini" "nos sdk use java $major (définit JAVA_HOME dans ~/.nos/env.sh)"
+    doctor_result warn "$raw : JAVA_HOME non défini" "nos sdk use java $major (définit JAVA_HOME dans ~/.nos/env.sh)"
     return
   fi
   case "$major" in
     17|21) doctor_result ok "$raw (JAVA_HOME=$JAVA_HOME)" ;;
-    *) doctor_result warn "$raw — Android Studio et Gradle recommandent Java 17 LTS" "nos sdk install java 17" ;;
+    *) doctor_result warn "$raw : Android Studio et Gradle recommandent Java 17 LTS" "nos sdk install java 17" ;;
   esac
 }
 

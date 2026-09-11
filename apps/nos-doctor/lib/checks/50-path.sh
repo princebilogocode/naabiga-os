@@ -21,7 +21,7 @@ check_path() {
     doctor_path_has "$dir" || missing+=("$dir")
   done
   if [ "${#missing[@]}" -gt 0 ]; then
-    doctor_result warn "dossiers absents du PATH : ${missing[*]}" "source ~/.nos/env.sh (ou reconnectez-vous) — nos doctor --repair"
+    doctor_result warn "dossiers absents du PATH : ${missing[*]}" "source ~/.nos/env.sh (ou reconnectez-vous) : nos doctor --repair"
     return
   fi
   local n
