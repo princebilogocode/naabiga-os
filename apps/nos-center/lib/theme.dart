@@ -32,7 +32,7 @@ class NosTheme {
       fontFamily: 'Inter',
       scaffoldBackgroundColor:
           brightness == Brightness.dark ? NosColors.black : NosColors.white,
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),

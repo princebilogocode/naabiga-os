@@ -5,6 +5,8 @@ setup() {
   ROOT="$(cd "$BATS_TEST_DIRNAME/../.." && pwd)"
   NOS="$ROOT/apps/nos-cli/bin/nos"
   export HOME="$(mktemp -d)"
+  export XDG_CONFIG_HOME="$HOME/.config"
+  export NOS_HOME="$HOME/.nos"
   export NOS_SDK_DIR="$HOME/.nos/sdk"
   export NO_COLOR=1
   export NOS_DRY_RUN=1
