@@ -2,11 +2,11 @@
 
 Format court : contexte, décision, conséquences. Une décision se change par une nouvelle ADR qui remplace l'ancienne.
 
-## ADR-001 — Base Ubuntu 24.04 LTS
+## ADR-001 — Socle Linux LTS
 
 **Contexte.** Stabilité, support matériel, dépôts riches, familiarité des étudiants et des entreprises.
-**Décision.** N-OS est une dérivée d'Ubuntu 24.04 LTS (noble) ; l'ID `ubuntu` est conservé dans `/etc/os-release` pour la compatibilité des PPA et des installateurs tiers, `PRETTY_NAME` et `/etc/nos-release` portent l'identité N-OS.
-**Conséquences.** Cycle de publication aligné sur Ubuntu LTS (2 ans) ; pas de modification profonde du système.
+**Décision.** N-OS s'appuie sur un socle Linux LTS de génération « noble » (support 5 ans) ; l'identifiant technique du socle reste dans `/etc/os-release` pour la compatibilité des dépôts et installateurs tiers, tandis que tout ce qui est visible (`PRETTY_NAME`, `NAME`, `lsb_release`, `/etc/nos-release`, écran d'installation, message d'accueil) porte exclusivement l'identité Naabiga OS.
+**Conséquences.** Cycle de publication LTS (nouvelle base tous les 2 ans, support 5 ans) ; pas de modification profonde du socle.
 
 ## ADR-002 — Bureau Cinnamon
 
@@ -23,7 +23,7 @@ Format court : contexte, décision, conséquences. Une décision se change par u
 ## ADR-004 — APT + Flatpak, pas de Snap par défaut
 
 **Contexte.** Snap est lent au démarrage, propriétaire côté serveur, et rend les navigateurs plus lourds.
-**Décision.** Paquets `.deb` (dépôts Ubuntu + dépôt N-OS) et Flatpak (Flathub). `snapd` est épinglé à une priorité négative ; l'utilisateur peut le réactiver.
+**Décision.** Paquets `.deb` (dépôts du socle + dépôt N-OS) et Flatpak (Flathub). `snapd` est épinglé à une priorité négative ; l'utilisateur peut le réactiver.
 **Conséquences.** Firefox est fourni en `.deb`/Flatpak ; certains logiciels Snap-only passent par `nos install`.
 
 ## ADR-005 — CLI en Bash pour l'Alpha, Rust ensuite
@@ -54,4 +54,4 @@ Format court : contexte, décision, conséquences. Une décision se change par u
 
 ## ADR-010 — Sécurité activée par défaut
 
-**Décision.** UFW activé, AppArmor, `unattended-upgrades`, Secure Boot via shim Ubuntu, LUKS proposé, ISO avec `SHA256SUMS` signé GPG.
+**Décision.** UFW activé, AppArmor, `unattended-upgrades`, Secure Boot via chargeur signé, LUKS proposé, ISO avec `SHA256SUMS` signé GPG.

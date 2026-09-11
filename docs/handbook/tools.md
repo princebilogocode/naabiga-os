@@ -17,7 +17,7 @@ Source : `apps/nos-cli/share/catalog.tsv` (installé dans `/usr/share/nos/catalo
 
 | Méthode | Mécanisme |
 |---|---|
-| `apt` | `apt-get install` (dépôts Ubuntu) |
+| `apt` | `apt-get install` (dépôts du socle) |
 | `flatpak` | Flathub |
 | `npm` / `pipx` | paquet global |
 | `script` | script dans `scripts/dev-tools/` (dépôts tiers : VS Code, Docker, Chrome ; archives : Android Studio, Kotlin ; rustup ; Playwright) |

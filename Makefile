@@ -45,7 +45,7 @@ uninstall-cli: ## Désinstaller la CLI nos
 packages: ## Construire les paquets .deb (nos-base, nos-branding, nos-cli, nos-desktop)
 	bash build/build-packages.sh
 
-iso: packages ## Construire l'ISO (Ubuntu 24.04, sudo requis)
+iso: packages ## Construire l'ISO (sudo requis, socle LTS noble)
 	bash build/build-iso.sh
 
 docs: ## Construire la documentation MkDocs

@@ -18,7 +18,7 @@ sudo apt install ./build/out/packages/nos-cli_*.deb
 
 ## Formats
 
-- **APT/.deb** : système et outils N-OS.
+- **APT/.deb** : système et outils N-OS (dépôts du socle + dépôt N-OS).
 - **Flatpak** : applications de bureau (Flathub activé au premier démarrage).
 - **Snap** : non installé par défaut ([ADR-004](../architecture/decisions.md)).
 

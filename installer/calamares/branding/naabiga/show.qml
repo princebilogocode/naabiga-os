@@ -21,7 +21,7 @@ Presentation {
         Text {
             anchors.centerIn: parent; width: parent.width * 0.8; wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter; color: "#FFFFFF"; font.pixelSize: 26
-            text: "<b style='color:#D4AF37'>Naabiga OS</b><br><br>La distribution Linux des développeurs, pensée en Afrique et ouverte au monde.<br><br><span style='color:#BBBBBB;font-size:18px'>Build Faster. Create Smarter.</span>"
+            text: "<b style='color:#D4AF37'>Naabiga OS</b><br><br>Le premier système d'exploitation conçu par des Burkinabè, pour les Burkinabè et pour l'Afrique.<br><br><span style='color:#BBBBBB;font-size:18px'>Build Faster. Create Smarter.</span>"
         }
     }
     Slide {
@@ -42,7 +42,7 @@ Presentation {
         Text {
             anchors.centerIn: parent; width: parent.width * 0.8; wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter; color: "#FFFFFF"; font.pixelSize: 22
-            text: "<b style='color:#D4AF37'>Sûr et rapide par défaut</b><br><br>Pare-feu activé, mises à jour de sécurité automatiques, ZRAM, TRIM, chiffrement du disque en option.<br><br><span style='color:#BBBBBB'>Base Ubuntu 24.04 LTS, support long terme.</span>"
+            text: "<b style='color:#D4AF37'>Sûr et rapide par défaut</b><br><br>Pare-feu activé, mises à jour de sécurité automatiques, ZRAM, TRIM, chiffrement du disque en option.<br><br><span style='color:#BBBBBB'>Support long terme (LTS), stabilité de niveau entreprise.</span>"
         }
     }
     Slide {

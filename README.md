@@ -12,7 +12,8 @@
 <p align="center">
   <a href="https://github.com/princebilogocode/naabiga-os/actions/workflows/ci.yml"><img src="https://github.com/princebilogocode/naabiga-os/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-GPL--3.0-D62828" alt="Licence GPL-3.0"></a>
-  <img src="https://img.shields.io/badge/base-Ubuntu%2024.04%20LTS-E95420" alt="Ubuntu 24.04 LTS">
+  <img src="https://img.shields.io/badge/Made%20in-Burkina%20Faso-D62828" alt="Made in Burkina Faso">
+  <img src="https://img.shields.io/badge/support-LTS-198754" alt="Support LTS">
   <img src="https://img.shields.io/badge/bureau-Cinnamon-D4AF37" alt="Cinnamon">
   <img src="https://img.shields.io/badge/version-1.0.0--alpha.1-198754" alt="Version">
 </p>
@@ -21,9 +22,11 @@
 
 ## Qu'est-ce que Naabiga OS ?
 
-**Naabiga OS** (abrégé **N-OS** ou **NOS**) est une distribution Linux basée sur **Ubuntu 24.04 LTS**, conçue pour qu'un développeur puisse **installer son système et commencer à coder en moins de 5 minutes**.
+**Naabiga OS est le premier système d'exploitation conçu par des Burkinabè, pour les Burkinabè et pour l'Afrique.** Une fierté nationale portée par ICONEDOR et les étudiants de l'Université Aube Nouvelle de Bobo-Dioulasso.
 
-N-OS ne réinvente pas Linux. Le projet ajoute au-dessus d'Ubuntu une couche cohérente d'outils, d'intégration et de qualité : SDK préinstallés, diagnostic automatique, gestionnaire de versions, assistants IA, bureau Cinnamon personnalisé et expérience **francophone par défaut**.
+**Naabiga OS** (abrégé **N-OS** ou **NOS**) est un système d'exploitation Linux à support long terme (LTS), conçu pour qu'un développeur puisse **installer son système et commencer à coder en moins de 5 minutes**.
+
+N-OS ne réinvente pas Linux. Le projet construit sur un socle Linux LTS éprouvé une couche cohérente d'outils, d'intégration et de qualité : SDK préinstallés, diagnostic automatique, gestionnaire de versions, assistants IA, bureau Cinnamon personnalisé et expérience **francophone par défaut**.
 
 N-OS fait partie de l'écosystème **[NAABIGA](branding/charte-graphique-naabiga.md)**, un ensemble de services numériques africains (AI, Store, Cloud, Pay, Maps, Docs, OS…).
 
@@ -73,7 +76,7 @@ nos info              # Informations système
 
 ## Démarrage rapide
 
-### Essayer la CLI sans installer N-OS (sur n'importe quel Ubuntu/Debian)
+### Essayer la CLI sans installer N-OS (sur toute distribution à base Debian)
 
 ```bash
 git clone https://github.com/princebilogocode/naabiga-os.git
@@ -118,10 +121,10 @@ naabiga-os/
 ## Architecture
 
 ```text
-Debian → Ubuntu 24.04 LTS → N-OS Core → N-OS Desktop → N-OS Developer Platform → Applications N-OS
+Noyau Linux → Socle LTS → N-OS Core → N-OS Desktop → N-OS Developer Platform → Applications N-OS
 ```
 
-Décisions clés : Ubuntu 24.04 LTS, Cinnamon, Calamares, APT + Flatpak (pas de Snap par défaut), MkDocs Material, Flutter Desktop pour N-OS Center, Bash puis Rust pour les outils système.
+Décisions clés : socle Linux LTS (support 5 ans), Cinnamon, Calamares, APT + Flatpak (pas de Snap par défaut), MkDocs Material, Flutter Desktop pour N-OS Center, Bash puis Rust pour les outils système.
 
 Détails : [docs/architecture/](docs/architecture/).
 
@@ -151,4 +154,4 @@ Les contributions sont les bienvenues, en particulier de la part des étudiants 
 
 ---
 
-<p align="center"><em>Built in Africa. Ready for the World.</em></p>
+<p align="center"><em>Fait au Burkina Faso, pour l'Afrique. Built in Africa. Ready for the World.</em></p>

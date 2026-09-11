@@ -2,7 +2,7 @@
 
 ## Prérequis
 
-Une machine ou VM **Ubuntu 24.04** avec 30 Go libres et une bonne connexion (l'image télécharge ~4 Go de paquets ; utilisez un miroir proche).
+Une machine **N-OS** (ou un système à base Debian de génération « noble ») avec 30 Go libres et une bonne connexion (l'image télécharge ~4 Go de paquets ; utilisez un miroir proche).
 
 ```bash
 sudo apt install live-build debootstrap xorriso squashfs-tools isolinux syslinux-common \
@@ -21,7 +21,7 @@ sudo make iso
 
 1. `build/build-packages.sh` → `nos-cli`, `nos-branding`, `nos-desktop`, `nos-base` (`.deb`, injectés dans `iso/config/packages.chroot/`).
 2. Copie de la configuration Calamares, du lanceur d'installation et des images Plymouth/GRUB générées.
-3. `lb config` (`iso/auto/config`) : Ubuntu noble, amd64, ISO hybride, syslinux + GRUB EFI, Secure Boot.
+3. `lb config` (`iso/auto/config`) : socle noble, amd64, ISO hybride, syslinux + GRUB EFI, Secure Boot.
 4. `lb build` : bootstrap, installation des listes de paquets, hooks (branding, outils de dev, nettoyage), squashfs zstd, ISO.
 5. `sha256sum`, signature GPG facultative (`NOS_GPG_KEY`).
 
@@ -31,7 +31,7 @@ Résultat : `build/out/naabiga-os-<version>-amd64.iso`, `.sha256`, `.log`.
 
 | Variable | Rôle |
 |---|---|
-| `NOS_MIRROR` | miroir Ubuntu, par ex. `http://bf.archive.ubuntu.com/ubuntu/` |
+| `NOS_MIRROR` | miroir de paquets du socle, par ex. `http://bf.archive.ubuntu.com/ubuntu/` |
 | `NOS_SKIP_VSCODE=1`, `NOS_SKIP_FLUTTER=1`, `NOS_SKIP_NODE=1` | build de test plus rapide |
 | `NOS_ARCH` | `amd64` (arm64 en Beta) |
 

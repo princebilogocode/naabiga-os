@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installe Docker Engine + plugin Compose depuis le dépôt officiel Docker
+# Installe Docker Engine + plugin Compose depuis le dépôt officiel Docker (socle noble)
 # SPDX-License-Identifier: GPL-3.0-or-later
 set -euo pipefail
 

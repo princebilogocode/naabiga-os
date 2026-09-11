@@ -15,7 +15,7 @@
        ```
     4. Démarrez sur la clé (BIOS ou UEFI, Secure Boot supporté), essayez la session live, puis cliquez sur **Installer Naabiga OS**.
 
-=== "CLI seule (sur Ubuntu/Debian existant)"
+=== "CLI seule (sur un système à base Debian existant)"
 
     ```bash
     git clone https://github.com/princebilogocode/naabiga-os.git

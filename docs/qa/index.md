@@ -8,7 +8,7 @@
 | Unitaires CLI, Doctor, SDK, AI | `make test-unit` | bats (mode `NOS_DRY_RUN=1`) |
 | Intégration (installation DESTDIR, cohérence du dépôt, build des .deb) | `make test-integration` | bash, dpkg-deb |
 | Documentation | `mkdocs build --strict` | MkDocs |
-| Paquets | installation dans `ubuntu:24.04` | Docker (CI) |
+| Paquets | installation dans un conteneur de test (socle noble) | Docker (CI) |
 | ISO | `workflow_dispatch` / tags | live-build (CI) |
 
 ## Checklist release (manuelle, bloquante)

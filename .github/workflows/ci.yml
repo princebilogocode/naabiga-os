@@ -51,7 +51,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y dpkg-dev fakeroot
       - run: make packages
-      - name: Installer nos-cli dans un conteneur Ubuntu 24.04
+      - name: Installer nos-cli dans un conteneur de test (socle noble)
         run: |
           docker run --rm -v "$PWD/build/out/packages:/pkgs" ubuntu:24.04 bash -c '
             set -e

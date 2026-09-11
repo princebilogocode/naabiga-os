@@ -1,5 +1,7 @@
 # branding/ — identité visuelle de Naabiga OS
 
+**Naabiga OS est le premier système d'exploitation conçu par des Burkinabè, pour les Burkinabè et pour l'Afrique.** Une fierté nationale portée par ICONEDOR et les étudiants de l'Université Aube Nouvelle de Bobo-Dioulasso.
+
 Naabiga OS applique la [charte graphique NAABIGA](charte-graphique-naabiga.md). Couleurs produit de l'OS : **Rouge + Or**.
 
 | Fichier | Usage |
@@ -22,7 +24,7 @@ Naabiga OS applique la [charte graphique NAABIGA](charte-graphique-naabiga.md). 
 
 ## Typographie
 
-Titres : Poppins Bold (repli Inter Bold). Texte : Inter. Code : JetBrains Mono. Les polices Inter et JetBrains Mono sont dans les dépôts Ubuntu (`fonts-inter`, `fonts-jetbrains-mono`) et préinstallées.
+Titres : Poppins Bold (repli Inter Bold). Texte : Inter. Code : JetBrains Mono. Les polices Inter et JetBrains Mono sont fournies par les paquets `fonts-inter` et `fonts-jetbrains-mono`, préinstallés.
 
 ## Règles
 

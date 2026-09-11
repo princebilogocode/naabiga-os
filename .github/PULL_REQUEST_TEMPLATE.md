@@ -18,7 +18,7 @@
 - [ ] Titre de PR et commits au format Conventional Commits
 - [ ] `make lint` et `make test` passent en local
 - [ ] Documentation mise à jour si nécessaire (`docs/`, `CHANGELOG.md`)
-- [ ] Testé sur Ubuntu 24.04 ou N-OS (préciser : VM, matériel, session live)
+- [ ] Testé sur N-OS (préciser : VM, matériel, session live)
 - [ ] Pour l'ISO/installateur : capture ou journal joint
 
 ## Comment tester

@@ -12,7 +12,7 @@ Ce dossier contient tout ce qui définit l'expérience de bureau de Naabiga OS (
 
 ## Choix Alpha
 
-- **Thème GTK** : `Yaru-red-dark` (livré par `yaru-theme-gtk` dans Ubuntu 24.04, accent rouge proche du rouge NAABIGA) en attendant le thème N-OS.
+- **Thème GTK** : `Yaru-red-dark` (paquet `yaru-theme-gtk`, accent rouge proche du rouge NAABIGA) en attendant le thème N-OS.
 - **Icônes** : `Papirus-Dark`.
 - **Polices** : Inter (texte), Poppins Bold (titres), JetBrains Mono (terminal).
 - **Panneau** : bas, 40 px, menu + liste de fenêtres groupées + zone système.

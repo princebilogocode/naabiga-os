@@ -6,9 +6,9 @@ Politique de signalement : `SECURITY.md` (security@iconedor.com, pas d'issue pub
 
 | Mesure | Mise en œuvre |
 |---|---|
-| Secure Boot | shim et GRUB signés Ubuntu (`shim-signed`, `grub-efi-amd64-signed`) |
+| Secure Boot | chargeur et GRUB signés (`shim-signed`, `grub-efi-amd64-signed`) |
 | Pare-feu | UFW activé au premier démarrage : entrant refusé, sortant autorisé, ports de dev (3000, 5173, 8000, 8080) ouverts au réseau local seulement |
-| AppArmor | actif, profils Ubuntu |
+| AppArmor | actif, profils du socle |
 | Mises à jour | `unattended-upgrades` pour les correctifs de sécurité ; `nos update` pour le reste |
 | Chiffrement | LUKS2 proposé dans Calamares ; saisie du mot de passe dans Plymouth |
 | Intégrité | ISO avec `.sha256` (+ signature GPG en release) ; paquets N-OS signés (dépôts RC) |

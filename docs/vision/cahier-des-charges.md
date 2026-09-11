@@ -13,7 +13,7 @@ Objectif :
 
 > Installer le système et être prêt à développer en moins de 5 minutes.
 
-NOS est basée sur **Ubuntu LTS** afin de bénéficier de sa stabilité tout en apportant une expérience optimisée.
+NOS est le premier système d'exploitation conçu par des Burkinabè, pour les Burkinabè et pour l'Afrique. Il s'appuie sur un **socle Linux LTS** afin de bénéficier d'une stabilité éprouvée tout en apportant une expérience entièrement pensée ici.
 
 ---
 
@@ -31,7 +31,7 @@ NOS est basée sur **Ubuntu LTS** afin de bénéficier de sa stabilité tout en 
 
 # 3. Architecture
 
-Ubuntu LTS
+Socle Linux LTS
 → Naabiga OS
 → Outils ICONEDOR
 

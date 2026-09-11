@@ -12,7 +12,7 @@ Synthèse des feuilles de route du cahier des charges, de la spécification et d
 | Catalogue `nos install` (68 outils) | ✅ |
 | Profils bureautique, enseignement supérieur, administration (`nos profile`) | ✅ |
 | Politique zéro secret (scanner, hook pre-commit, Gitleaks en CI) | ✅ |
-| Configuration ISO live-build (Ubuntu 24.04 + Cinnamon) | ✅ à valider par un build complet |
+| Configuration ISO live-build (socle LTS + Cinnamon) | ✅ à valider par un build complet |
 | Installateur Calamares (fr, LUKS, branding) | ✅ à valider sur l'ISO |
 | Paquets .deb (nos-cli, nos-branding, nos-desktop, nos-base) | ✅ |
 | Optimisations (ZRAM, TRIM, SSD, boot, Docker, Flutter, Android Studio) | ✅ |
@@ -39,7 +39,7 @@ Synthèse des feuilles de route du cahier des charges, de la spécification et d
 
 ## 1.0 LTS
 
-- Publication publique, support long terme aligné sur Ubuntu 24.04.
+- Publication publique, support long terme de 5 ans.
 - Édition Enterprise : gestion de parc, déploiement en entreprise, support professionnel.
 - Adoption dans les universités et écoles (U-AUBEN en pilote).
 

@@ -1,5 +1,9 @@
 # Auteurs et contributeurs
 
+## Une fierté nationale
+
+**Naabiga OS est le premier système d'exploitation conçu par des Burkinabè, pour les Burkinabè et pour l'Afrique.** Une fierté nationale portée par ICONEDOR et les étudiants de l'Université Aube Nouvelle de Bobo-Dioulasso.
+
 ## Porteur du projet
 
 **ICONEDOR** — Burkina Faso

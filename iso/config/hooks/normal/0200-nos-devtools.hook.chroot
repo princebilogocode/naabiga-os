@@ -1,5 +1,5 @@
 #!/bin/sh
-# Hook chroot : outils de développement non disponibles dans les dépôts Ubuntu
+# Hook chroot : outils de développement non disponibles dans les dépôts du socle
 # (VS Code, Flutter, Node.js LTS) — installés dans /opt pour l'image, activés par nos sdk
 set -e
 

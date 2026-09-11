@@ -18,7 +18,7 @@ Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) — Versionnag
 - `nos profile` : profils d'usage **dev**, **bureautique** (LibreOffice fr, polices Office, impression/scan, PDF/OCR), **education** (LaTeX, Jupyter, R, Octave, GeoGebra, Zotero, Veyon, mode salle de TP) et **administration** (durcissement, sauvegardes, ClamAV, Active Directory, inventaire GLPI, USB lecture seule) avec optimisations dédiées.
 - Vérification Doctor `office` (LibreOffice, français, impression).
 - Politique zéro secret : `.gitignore` renforcé, `scripts/check-secrets.sh`, hook pre-commit, job CI + Gitleaks.
-- Configuration live-build pour l'ISO Ubuntu 24.04 + Cinnamon, hooks de branding et d'optimisation.
+- Configuration live-build pour l'ISO N-OS (socle LTS + Cinnamon), hooks de branding et d'optimisation.
 - Configuration Calamares (français par défaut, LUKS proposé, branding N-OS).
 - Personnalisation Cinnamon (dconf), Plymouth, GRUB, thème et palette NAABIGA.
 - Paquets .deb : `nos-base`, `nos-branding`, `nos-cli`, `nos-desktop`.

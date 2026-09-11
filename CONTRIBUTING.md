@@ -7,7 +7,7 @@ Merci de vouloir contribuer à Naabiga OS. Ce guide s'adresse à tous, en partic
 - Un compte GitHub.
 - Git installé (`sudo apt install git`).
 - Pour la CLI et les tests : Bash 5, `shellcheck`, `bats`.
-- Pour l'ISO : Ubuntu 24.04, `live-build`, `debootstrap`, `xorriso`, `squashfs-tools`.
+- Pour l'ISO : une machine N-OS (ou tout système à base Debian de génération « noble »), `live-build`, `debootstrap`, `xorriso`, `squashfs-tools`.
 - Pour la documentation : Python 3 et `pip install mkdocs-material`.
 
 ## 2. Workflow Git (GitFlow simplifié)

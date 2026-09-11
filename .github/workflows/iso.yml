@@ -8,7 +8,7 @@ on:
         type: boolean
         default: false
       mirror:
-        description: "Miroir Ubuntu"
+        description: "Miroir de paquets du socle"
         default: "http://archive.ubuntu.com/ubuntu/"
   push:
     tags: ["v*"]
@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   iso:
-    name: Construire l'ISO (Ubuntu 24.04, live-build)
+    name: Construire l'ISO N-OS (live-build)
     runs-on: ubuntu-24.04
     timeout-minutes: 180
     steps:

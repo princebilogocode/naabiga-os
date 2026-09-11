@@ -12,7 +12,7 @@
 Ce document constitue la vision d'ingénierie officielle de Naabiga OS.
 
 Le projet a pour ambition de devenir la meilleure distribution Linux pour les développeurs,
-sans réinventer Linux, mais en construisant une plateforme cohérente au-dessus d'Ubuntu LTS.
+sans réinventer Linux, mais en construisant une plateforme cohérente au-dessus d'un socle Linux LTS.
 
 ---
 
@@ -64,9 +64,9 @@ Créer un véritable écosystème :
 # 3. Architecture
 
 ```
-Debian
+Noyau Linux
    │
-Ubuntu LTS
+Socle LTS
    │
 NOS Core
    │

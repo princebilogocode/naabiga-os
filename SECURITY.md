@@ -4,7 +4,7 @@
 
 | Version | Support |
 |---|---|
-| 1.0.x LTS (à venir) | Oui, aligné sur Ubuntu 24.04 LTS |
+| 1.0.x LTS (à venir) | Oui, support long terme de 5 ans |
 | Alpha / Beta | Correctifs au fil de l'eau, sans garantie |
 
 ## Signaler une vulnérabilité
@@ -21,7 +21,7 @@ Nous accusons réception sous 72 heures et publions un correctif coordonné.
 
 ## Mesures de sécurité par défaut de N-OS
 
-- Secure Boot compatible (shim signé Ubuntu).
+- Secure Boot compatible (chargeur signé).
 - Pare-feu UFW activé au premier démarrage (`scripts/first-boot/40-firewall.sh`).
 - AppArmor actif.
 - Mises à jour de sécurité automatiques (`unattended-upgrades`).

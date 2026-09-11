@@ -2,7 +2,9 @@
 
 ![Naabiga OS](assets/logo.png){ width="140" }
 
-**Naabiga OS (N-OS)** est une distribution Linux basée sur Ubuntu 24.04 LTS, conçue pour qu'un développeur soit **prêt à coder en moins de 5 minutes** après l'installation.
+**Naabiga OS est le premier système d'exploitation conçu par des Burkinabè, pour les Burkinabè et pour l'Afrique.** Une fierté nationale portée par ICONEDOR et les étudiants de l'Université Aube Nouvelle de Bobo-Dioulasso.
+
+**Naabiga OS (N-OS)** est un système d'exploitation Linux à support long terme, conçu pour qu'un développeur soit **prêt à coder en moins de 5 minutes** après l'installation.
 
 > Build Faster. Create Smarter.
 
@@ -30,7 +32,7 @@ nos install flutter   # et on installe ce qui manque
 ## Architecture
 
 ```text
-Debian → Ubuntu 24.04 LTS → N-OS Core → N-OS Desktop → N-OS Developer Platform → Applications N-OS
+Noyau Linux → Socle LTS → N-OS Core → N-OS Desktop → N-OS Developer Platform → Applications N-OS
 ```
 
 Décisions : Cinnamon, Calamares, APT + Flatpak, MkDocs Material, Flutter Desktop (N-OS Center), Bash puis Rust (outils système). Détails dans [le SAD](architecture/software-architecture-document.md) et [les ADR](architecture/decisions.md).

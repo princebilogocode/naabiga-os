@@ -9,7 +9,7 @@ Version 1.0
 
 # Vision
 
-Naabiga OS (abrégé **N-OS**) est une distribution Linux basée sur Ubuntu LTS, conçue pour offrir la meilleure expérience de développement possible.
+Naabiga OS (abrégé **N-OS**) est le premier système d'exploitation conçu par des Burkinabè, pour les Burkinabè et pour l'Afrique : une fierté nationale. Il s'appuie sur un socle Linux LTS et vise la meilleure expérience de développement possible.
 
 Le projet privilégie :
 - la stabilité ;
@@ -25,7 +25,7 @@ La langue du système est **Français** lors de l'installation, avec possibilit�
 
 - Installation en moins de 20 minutes.
 - Environnement de développement prêt en moins de 5 minutes après le premier démarrage.
-- Cycle de publication aligné sur Ubuntu LTS.
+- Cycle de publication LTS (2 ans).
 - Documentation complète.
 - Plateforme ouverte aux contributions.
 
@@ -34,9 +34,9 @@ La langue du système est **Français** lors de l'installation, avec possibilit�
 # Architecture
 
 ```text
-Debian
+Noyau Linux
    │
-Ubuntu LTS
+Socle LTS
    │
 N-OS Core
    │
@@ -229,6 +229,6 @@ Toute la documentation est en Markdown et publiée avec MkDocs Material.
 
 # Philosophie
 
-N-OS ne cherche pas à modifier Ubuntu en profondeur.
+N-OS ne cherche pas à modifier son socle en profondeur.
 
 Le projet ajoute une couche d'outils, de qualité et d'intégration afin que chaque développeur puisse travailler immédiatement après l'installation du système.

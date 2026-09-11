@@ -30,7 +30,7 @@ Le hook `iso/config/hooks/normal/0100-nos-branding.hook.chroot` et le paquet `no
 
 ## Tester sans reconstruire l'ISO
 
-Sur une session live ou une VM Ubuntu avec `calamares` installé :
+Sur une session live N-OS (ou une VM avec `calamares` installé) :
 
 ```bash
 sudo cp -r installer/calamares/* /etc/calamares/

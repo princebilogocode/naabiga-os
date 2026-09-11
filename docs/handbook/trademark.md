@@ -23,4 +23,4 @@ Contact : contact@iconedor.com.
 
 ## Logiciels tiers
 
-L'ISO contient des logiciels sous licences diverses (Ubuntu, Cinnamon, OpenJDK, Flutter…). Google Chrome, Android Studio et certains SDK sont proposés **après** installation via `nos install`, en acceptant leurs conditions respectives.
+L'ISO contient des logiciels libres sous licences diverses (noyau Linux, Cinnamon, OpenJDK, Flutter…). Google Chrome, Android Studio et certains SDK sont proposés **après** installation via `nos install`, en acceptant leurs conditions respectives.

@@ -40,7 +40,7 @@
 
 # 1. Vision
 
-Naabiga OS est une distribution Linux basée sur Ubuntu LTS.
+Naabiga OS est le premier système d'exploitation conçu par des Burkinabè, pour les Burkinabè et pour l'Afrique. Il s'appuie sur un socle Linux LTS.
 
 Le projet ne réinvente pas Linux : il fournit une expérience parfaitement intégrée pour les développeurs.
 
@@ -56,7 +56,7 @@ Objectifs principaux :
 
 # 2. Objectifs techniques
 
-- Base Ubuntu LTS
+- Socle Linux LTS
 - Cinnamon personnalisé
 - ISO installable UEFI/Secure Boot
 - Mises à jour OTA
@@ -81,8 +81,8 @@ Objectifs principaux :
 
 # 4. Architecture
 
-Debian
-→ Ubuntu LTS
+Noyau Linux
+→ Socle LTS
 → Naabiga OS
 
 Modules :
@@ -282,10 +282,10 @@ Tous les développements spécifiques de NOS devront être hébergés dans des d
 - Environnement de développement fonctionnel immédiatement
 - `nos doctor` sans erreur sur une installation neuve
 - Documentation complète
-- Cycle de publication aligné sur Ubuntu LTS
+- Cycle de publication LTS (2 ans)
 
 ---
 
 # Conclusion
 
-L'ambition de Naabiga OS n'est pas d'être une simple dérivée d'Ubuntu, mais une plateforme de développement cohérente, maintenue professionnellement par ICONEDOR, mettant l'accent sur la productivité, la stabilité et l'expérience développeur.
+L'ambition de Naabiga OS n'est pas d'être une simple distribution de plus, mais une plateforme de développement cohérente, maintenue professionnellement par ICONEDOR, mettant l'accent sur la productivité, la stabilité et l'expérience développeur.

@@ -20,7 +20,7 @@ Il constitue la référence technique utilisée par toutes les équipes de déve
 
 ## Ne jamais réinventer la roue
 
-NOS est basée sur Ubuntu LTS.
+NOS s'appuie sur un socle Linux LTS éprouvé.
 
 Le projet se concentre sur :
 
@@ -35,9 +35,9 @@ Le projet se concentre sur :
 # 3. Architecture globale
 
 ```text
-Debian
+Noyau Linux
     │
-Ubuntu LTS
+Socle LTS
     │
 NOS Core
     │
@@ -56,7 +56,7 @@ Applications NOS
 
 Responsabilités :
 
-- personnalisation Ubuntu
+- personnalisation du socle
 - configuration système
 - paquets NOS
 - branding
@@ -306,7 +306,7 @@ Conventions :
 
 # 13. Décisions d'architecture
 
-- Base : Ubuntu 24.04 LTS
+- Base : socle Linux LTS (génération noble, support 5 ans)
 - Bureau : Cinnamon
 - Installateur : Calamares
 - Paquets : APT + Flatpak
