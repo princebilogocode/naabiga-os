@@ -2,7 +2,7 @@
 
 Synthèse des feuilles de route du cahier des charges, de la spécification et du blueprint, avec l'état réel du dépôt.
 
-## Alpha — « Bobo » (en cours)
+## Alpha : « Bobo » (en cours)
 
 | Livrable | État |
 |---|---|
@@ -32,7 +32,7 @@ Synthèse des feuilles de route du cahier des charges, de la spécification et d
 
 ## RC
 
-- Dépôts `stable`, `testing`, `unstable`, `nightly` sur `repo.naabiga.org`.
+- Dépôts `stable`, `testing`, `unstable`, `nightly` sur `repo.naabiga.com`.
 - Site officiel (téléchargement, docs, blog, roadmap, forum, support).
 - Documentation complète FR + EN.
 - Tests de régression automatisés en VM (QEMU dans la CI).
@@ -43,6 +43,6 @@ Synthèse des feuilles de route du cahier des charges, de la spécification et d
 - Édition Enterprise : gestion de parc, déploiement en entreprise, support professionnel.
 - Adoption dans les universités et écoles (U-AUBEN en pilote).
 
-## Vision 2026–2030
+## Vision 2026-2030
 
 Naabiga OS Community et Enterprise, NOS Cloud, NOS AI Suite, NOS Device Manager, NOS Build Farm, NOS Update Server, NOS Developer Portal : faire de N-OS la plateforme de développement de référence en Afrique, portée par ICONEDOR et sa communauté.

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Optimisations N-OS — profil Bureautique
+# Optimisations N-OS : profil Bureautique
 # LibreOffice rapide et compatible Office, impression/scan actifs, associations de fichiers, autonomie
 # Exécuté en root par : nos profile apply bureautique
 # SPDX-License-Identifier: GPL-3.0-or-later
@@ -77,7 +77,7 @@ $SUDO fc-cache -f >/dev/null 2>&1 || true
 echo "== Bureautique : bureau (favoris, économie d'énergie, sécurité)"
 $SUDO mkdir -p /etc/dconf/db/local.d
 $SUDO tee /etc/dconf/db/local.d/10-naabiga-bureautique >/dev/null <<'EOF'
-# Naabiga OS — profil Bureautique
+# Naabiga OS : profil Bureautique
 [org/cinnamon]
 favorite-apps=['nemo.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'libreoffice-impress.desktop', 'thunderbird.desktop', 'firefox.desktop', 'simple-scan.desktop', 'nos-center.desktop', 'cinnamon-settings.desktop']
 

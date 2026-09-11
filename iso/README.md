@@ -1,4 +1,4 @@
-# iso/ — construction de l'image Naabiga OS
+# iso/ : construction de l'image Naabiga OS
 
 Configuration [live-build](https://live-team.pages.debian.net/live-manual/) pour produire l'ISO hybride de Naabiga OS (BIOS + UEFI, Secure Boot) : socle LTS « noble », bureau **Cinnamon**, installateur **Calamares**.
 
@@ -29,7 +29,7 @@ Variables utiles :
 | `NOS_MIRROR` | Miroir de paquets du socle (choisir un miroir proche : `http://bf.archive.ubuntu.com/ubuntu/`, `http://mirror.ihost.ci/ubuntu/`…) | archive.ubuntu.com |
 | `NOS_ARCH` | Architecture | amd64 |
 | `NOS_SKIP_VSCODE`, `NOS_SKIP_FLUTTER`, `NOS_SKIP_NODE` | `1` pour ignorer un outil lourd (build rapide de test) | 0 |
-| `NOS_GPG_KEY` | Identifiant de clé pour signer le `SHA256SUMS` | — |
+| `NOS_GPG_KEY` | Identifiant de clé pour signer le `SHA256SUMS` | aucune |
 
 ## Tester
 

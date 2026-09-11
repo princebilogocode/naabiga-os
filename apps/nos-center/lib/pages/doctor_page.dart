@@ -1,4 +1,4 @@
-// Page Doctor — état de l'environnement de développement
+// Page Doctor : état de l'environnement de développement
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import 'package:flutter/material.dart';

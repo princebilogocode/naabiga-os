@@ -31,7 +31,7 @@
 20. Infrastructure CI/CD
 21. Organisation des équipes
 22. Planning
-23. Roadmap 2026–2030
+23. Roadmap 2026-2030
 24. Modèle économique
 25. Open Source
 26. Critères de réussite

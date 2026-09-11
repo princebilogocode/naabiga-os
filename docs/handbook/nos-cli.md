@@ -11,12 +11,13 @@ nos <commande> [options]
 | `doctor` | Diagnostic et réparation ([détails](nos-doctor.md)) |
 | `install <outil>…` | Installer depuis le [catalogue](tools.md) |
 | `remove <outil>…` | Désinstaller |
-| `update [--system] [--sdk] [--ai]` | Mettre à jour APT/Flatpak, SDK, assistants IA |
+| `update [--system] [--sdk] [--ai] [--check]` | Mettre à jour APT/Flatpak, SDK, assistants IA ; `--check` compare avec la dernière version publiée (code 10 si mise à jour disponible) |
 | `repair` | Alias de `doctor --repair` |
 | `sdk` | Versions de Flutter, Java, Node.js, Android SDK ([détails](nos-sdk.md)) |
 | `ai` | Assistants IA ([détails](nos-ai.md)) |
 | `profile list|show|apply` | Profils d'usage : dev, bureautique, education, administration ([détails](profiles.md)) |
-| `info` | Système, outils et assistants installés |
+| `welcome` | Assistant de premier démarrage : profils, IDE, assistants IA, diagnostic (interactif avec whiptail, ou `--yes --profile … --ide … --ai …`) |
+| `info [--json]` | Système, outils et assistants installés (JSON pour N-OS Center) |
 | `config get|set|list` | Configuration (`~/.config/nos/config`) |
 | `version` | Version de N-OS |
 | `help` | Aide |
@@ -30,10 +31,12 @@ nos <commande> [options]
 | `NOS_SDK_DIR` | Dossier des SDK (défaut `~/.nos/sdk`) |
 | `NOS_CATALOG` | Chemin du catalogue TSV |
 | `NOS_ANDROID_CMDLINE_URL` | URL des cmdline-tools Android |
+| `NOS_RELEASES_API` | URL de l'API des versions pour `nos update --check` |
+| `NOS_WELCOME_DONE` | Marqueur de l'assistant de bienvenue (défaut `~/.nos/welcome.done`) |
 
 ## Codes de retour
 
-`0` succès · `1` erreur ou échec Doctor · `2` commande ou option inconnue.
+`0` succès · `1` erreur ou échec Doctor · `2` commande ou option inconnue · `10` mise à jour disponible (`nos update --check`).
 
 ## Complétion
 

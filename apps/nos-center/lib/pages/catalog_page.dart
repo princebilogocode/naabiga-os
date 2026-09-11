@@ -1,4 +1,4 @@
-// Page Outils — catalogue nos install
+// Page Outils : catalogue nos install
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import 'package:flutter/material.dart';

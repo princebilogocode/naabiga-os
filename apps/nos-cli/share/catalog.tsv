@@ -1,4 +1,4 @@
-# Catalogue des outils N-OS — colonnes séparées par des tabulations
+# Catalogue des outils N-OS : colonnes séparées par des tabulations
 # id	catégorie	description	méthode	spec	exécutable
 git	Base	Gestion de versions Git	apt	git	git
 curl	Base	Client HTTP curl	apt	curl	curl

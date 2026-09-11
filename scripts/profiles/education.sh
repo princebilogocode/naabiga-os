@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Optimisations N-OS — profil Enseignement supérieur
+# Optimisations N-OS : profil Enseignement supérieur
 # Salles de TP, enseignants-chercheurs, étudiants : outils scientifiques prêts, gestion de salle, bande passante
 # Exécuté en root par : nos profile apply education
 # SPDX-License-Identifier: GPL-3.0-or-later
@@ -59,7 +59,7 @@ fi
 echo "== Enseignement : bande passante et cache"
 # Les salles partagent souvent une connexion modeste : cache APT réutilisable et téléchargements limités
 $SUDO tee /etc/apt/apt.conf.d/80naabiga-education >/dev/null <<'EOF'
-// Naabiga OS — profil Enseignement : mises à jour hors heures de cours, pas de téléchargement des suggestions
+// Naabiga OS : profil Enseignement : mises à jour hors heures de cours, pas de téléchargement des suggestions
 APT::Periodic::Download-Upgradeable-Packages "1";
 Acquire::Queue-Mode "access";
 Acquire::Retries "3";
@@ -73,7 +73,7 @@ $SUDO systemctl daemon-reload 2>/dev/null || true
 echo "== Enseignement : bureau"
 $SUDO mkdir -p /etc/dconf/db/local.d
 $SUDO tee /etc/dconf/db/local.d/20-naabiga-education >/dev/null <<'EOF'
-# Naabiga OS — profil Enseignement supérieur
+# Naabiga OS : profil Enseignement supérieur
 [org/cinnamon]
 favorite-apps=['nemo.desktop', 'firefox.desktop', 'libreoffice-writer.desktop', 'texstudio.desktop', 'code.desktop', 'gnome-terminal.desktop', 'org.geogebra.GeoGebra.desktop', 'xournalpp.desktop', 'nos-center.desktop', 'cinnamon-settings.desktop']
 

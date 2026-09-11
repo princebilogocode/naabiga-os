@@ -1,4 +1,4 @@
-# installer/ — Calamares
+# installer/ : Calamares
 
 Naabiga OS utilise [Calamares](https://calamares.io/) comme installateur graphique (décision d'architecture, voir `docs/architecture/software-architecture-document.md` §13).
 

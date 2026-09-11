@@ -221,7 +221,7 @@ Pour chaque release :
 Proposition :
 
 ```text
-repo.naabiga.org
+repo.naabiga.com
 
 stable
 testing

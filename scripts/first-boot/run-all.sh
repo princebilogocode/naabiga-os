@@ -13,14 +13,14 @@ LOG="/var/log/nos-first-boot.log"
 mkdir -p "$(dirname "$MARK")"
 
 {
-  echo "=== Naabiga OS — premier démarrage : $(date)"
+  echo "=== Naabiga OS : premier démarrage : $(date)"
   for script in "$DIR"/[0-9][0-9]-*.sh; do
     [ -f "$script" ] || continue
     echo "--- $(basename "$script")"
     if bash "$script"; then
       echo "    OK"
     else
-      echo "    ÉCHEC (code $?) — poursuite"
+      echo "    ÉCHEC (code $?) : poursuite"
     fi
   done
   echo "=== Terminé : $(date)"

@@ -1,4 +1,4 @@
-// Thème N-OS Center — palette NAABIGA (rouge #D62828, or #D4AF37, vert #198754, noir #111111)
+// Thème N-OS Center : palette NAABIGA (rouge #D62828, or #D4AF37, vert #198754, noir #111111)
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import 'package:flutter/material.dart';

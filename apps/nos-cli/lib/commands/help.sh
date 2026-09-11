@@ -12,8 +12,8 @@ ${C_BOLD}Commandes :${C_RESET}
                        Diagnostic de l'environnement de développement
   install <outil>...   Installer un outil du catalogue (nos install --list)
   remove <outil>...    Désinstaller un outil du catalogue
-  update [--system] [--sdk] [--ai]
-                       Mettre à jour le système et les outils N-OS
+  update [--system] [--sdk] [--ai] [--check]
+                       Mettre à jour le système et les outils N-OS ; --check compare avec la dernière version
   repair               Réparer l'environnement (alias de doctor --repair)
   sdk <list|install|use|remove|current|env> [sdk] [version]
                        Gérer plusieurs versions de Flutter, Java, Node.js, Android SDK
@@ -21,7 +21,9 @@ ${C_BOLD}Commandes :${C_RESET}
                        Gérer les assistants IA (Claude Code, Gemini CLI, Ollama, Aider…)
   profile <list|show|apply> [profil]
                        Profils d'usage : dev, bureautique, education, administration, all
-  info                 Informations sur le système et les outils installés
+  welcome [--yes] [--profile p] [--ide id] [--ai id]
+                       Assistant de premier démarrage (profil, IDE, assistants IA, diagnostic)
+  info [--json]        Informations sur le système et les outils installés
   config <get|set|list> [clé] [valeur]
                        Configuration de la CLI
   version              Afficher la version de N-OS
@@ -36,11 +38,13 @@ ${C_BOLD}Exemples :${C_RESET}
   nos sdk use java 17
   nos ai install claude
   nos profile apply bureautique
+  nos welcome
+  nos update --check
 
 ${C_BOLD}Variables :${C_RESET}
   NOS_DRY_RUN=1        Afficher les commandes sans les exécuter
   NO_COLOR=1           Désactiver les couleurs
 
-Documentation : https://github.com/princebilogocode/naabiga-os
+Site : https://naabiga.com  ·  Code et documentation : https://github.com/princebilogocode/naabiga-os
 EOF
 }

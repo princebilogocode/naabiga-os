@@ -12,15 +12,15 @@ check_docker() {
   local v
   v="$(docker --version 2>/dev/null | tr -d '\r' | sed -E 's/,.*//')"
   if ! docker compose version >/dev/null 2>&1; then
-    doctor_result warn "$v — plugin docker compose absent" "sudo apt install docker-compose-plugin"
+    doctor_result warn "$v : plugin docker compose absent" "sudo apt install docker-compose-plugin"
     return
   fi
   if nos_is_linux && nos_has id && ! id -nG 2>/dev/null | tr ' ' '\n' | grep -qx docker; then
-    doctor_result warn "$v — l'utilisateur ${USER:-} n'est pas dans le groupe docker" "sudo usermod -aG docker \$USER puis reconnectez-vous"
+    doctor_result warn "$v : l'utilisateur ${USER:-} n'est pas dans le groupe docker" "sudo usermod -aG docker \$USER puis reconnectez-vous"
     return
   fi
   if ! docker info >/dev/null 2>&1; then
-    doctor_result warn "$v — le démon Docker ne répond pas" "sudo systemctl enable --now docker"
+    doctor_result warn "$v : le démon Docker ne répond pas" "sudo systemctl enable --now docker"
     return
   fi
   doctor_result ok "$v, compose $(docker compose version --short 2>/dev/null | tr -d '\r')"

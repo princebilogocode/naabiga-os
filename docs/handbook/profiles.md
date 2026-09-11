@@ -32,7 +32,7 @@ Pour universités, écoles d'ingénieurs, salles de TP, enseignants-chercheurs, 
 
 | Outils | Optimisations |
 |---|---|
-| Tout Bureautique + LaTeX (TeX Live recommandé, français, TeXstudio), JupyterLab, R (tidyverse) + noyau Jupyter, Octave, Scilab, Maxima, GeoGebra, Zotero, Anki, Calibre, OBS Studio (cours vidéo), Xournal++ (annotation, tableau blanc), Moodle Desktop, Veyon (supervision de salle), Python scientifique (numpy, scipy, pandas, matplotlib, sympy), pandoc, graphviz, Audacity, VLC | **Mode salle de TP** : `nos config set classroom 1` puis réappliquer → compte `etudiant` sans mot de passe ni sudo, dossier réinitialisé à la déconnexion (sauf `Documents/A_GARDER`) ; Veyon activé sur les postes ; mises à jour APT la nuit (02 h–04 h) et téléchargements limités pour préserver la bande passante partagée ; miroir CRAN configuré ; favoris orientés cours |
+| Tout Bureautique + LaTeX (TeX Live recommandé, français, TeXstudio), JupyterLab, R (tidyverse) + noyau Jupyter, Octave, Scilab, Maxima, GeoGebra, Zotero, Anki, Calibre, OBS Studio (cours vidéo), Xournal++ (annotation, tableau blanc), Moodle Desktop, Veyon (supervision de salle), Python scientifique (numpy, scipy, pandas, matplotlib, sympy), pandoc, graphviz, Audacity, VLC | **Mode salle de TP** : `nos config set classroom 1` puis réappliquer → compte `etudiant` sans mot de passe ni sudo, dossier réinitialisé à la déconnexion (sauf `Documents/A_GARDER`) ; Veyon activé sur les postes ; mises à jour APT la nuit (02 h-04 h) et téléchargements limités pour préserver la bande passante partagée ; miroir CRAN configuré ; favoris orientés cours |
 
 Le maître Veyon se configure sur le poste enseignant avec `veyon-configurator` (clés d'accès, liste des postes).
 

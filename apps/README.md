@@ -1,9 +1,9 @@
-# apps/ — applications officielles N-OS
+# apps/ : applications officielles N-OS
 
 | Application | Dossier | Langage | Commande | État |
 |---|---|---|---|---|
 | N-OS CLI | `nos-cli/` | Bash | `nos` | Alpha fonctionnel |
-| N-OS Doctor | `nos-doctor/` | Bash | `nos doctor` | Alpha fonctionnel (17 vérifications, réparation, JSON, HTML) |
+| N-OS Doctor | `nos-doctor/` | Bash | `nos doctor` | Alpha fonctionnel (22 vérifications, réparation, JSON, HTML) |
 | N-OS SDK Manager | `nos-sdk/` | Bash | `nos sdk` | Alpha fonctionnel (Flutter, Java, Node.js, Android SDK) |
 | N-OS AI Hub | `nos-ai/` | Bash | `nos ai` | Alpha fonctionnel (7 assistants) |
 | Profils d'usage | `nos-cli/share/profiles/` + `scripts/profiles/` | Bash | `nos profile` | Alpha fonctionnel (dev, bureautique, education, administration) |

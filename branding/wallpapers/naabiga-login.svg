@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Naabiga OS — fond de l'écran de connexion (sobre, sans texte : le greeter affiche le logo) -->
+<!-- Naabiga OS : fond de l'écran de connexion (sobre, sans texte : le greeter affiche le logo) -->
 <svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">

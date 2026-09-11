@@ -19,6 +19,8 @@ jobs:
           fetch-depth: 0
       - name: Scanner N-OS (motifs et fichiers sensibles)
         run: bash scripts/check-secrets.sh
+      - name: Style des textes (pas de tirets cadratins)
+        run: bash scripts/check-style.sh
       - name: Gitleaks (historique complet)
         uses: gitleaks/gitleaks-action@v2
         env:

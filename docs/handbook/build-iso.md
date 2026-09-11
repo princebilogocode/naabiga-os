@@ -31,7 +31,7 @@ Résultat : `build/out/naabiga-os-<version>-amd64.iso`, `.sha256`, `.log`.
 
 | Variable | Rôle |
 |---|---|
-| `NOS_MIRROR` | miroir de paquets du socle, par ex. `http://bf.archive.ubuntu.com/ubuntu/` |
+| `NOS_MIRROR` | miroir de paquets du socle (voir `iso/README.md`) ; un miroir `mirror.naabiga.com` est prévu en Beta |
 | `NOS_SKIP_VSCODE=1`, `NOS_SKIP_FLUTTER=1`, `NOS_SKIP_NODE=1` | build de test plus rapide |
 | `NOS_ARCH` | `amd64` (arm64 en Beta) |
 

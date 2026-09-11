@@ -1,4 +1,4 @@
-# Naabiga OS — thème GRUB
+# Naabiga OS : thème GRUB
 # Couleurs NAABIGA : noir #111111, or #D4AF37, rouge #D62828, blanc #FFFFFF
 
 title-text: ""
