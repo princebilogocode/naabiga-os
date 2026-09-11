@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="https://naabiga.com">naabiga.com</a> · <a href="https://princebilogocode.github.io/naabiga-os/">Documentation</a> · <a href="https://github.com/princebilogocode/naabiga-os/issues">Support</a>
+  <a href="https://naabiga.com">naabiga.com</a> · <a href="docs/index.md">Documentation</a> · <a href="https://github.com/princebilogocode/naabiga-os/issues">Support</a>
 </p>
 
 ---

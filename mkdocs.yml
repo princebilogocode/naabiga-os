@@ -1,6 +1,6 @@
 site_name: Naabiga OS
 site_description: "Documentation officielle de Naabiga OS (N-OS), la distribution Linux des développeurs : ICONEDOR × Université Aube Nouvelle (Bobo-Dioulasso)"
-site_url: https://princebilogocode.github.io/naabiga-os/
+site_url: https://naabiga.com/docs/
 repo_url: https://github.com/princebilogocode/naabiga-os
 repo_name: princebilogocode/naabiga-os
 edit_uri: edit/main/docs/

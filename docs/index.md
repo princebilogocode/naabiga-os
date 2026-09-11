@@ -10,7 +10,7 @@
 
 Développée par **ICONEDOR** (Burkina Faso) en collaboration avec les étudiants de **l'Université Aube Nouvelle (U-AUBEN), Bobo-Dioulasso**, dans l'écosystème **[NAABIGA](https://naabiga.com)**.
 
-Site officiel : [naabiga.com](https://naabiga.com)
+Site officiel : [naabiga.com](https://naabiga.com). Cette documentation est construite par le workflow Docs (artefact `documentation-site`) et sera publiée sur naabiga.com.
 
 ## Par où commencer ?
 

@@ -4,5 +4,5 @@ contact_links:
     url: https://github.com/princebilogocode/naabiga-os/blob/main/SECURITY.md
     about: Ne créez pas d'issue publique. Suivez la procédure de SECURITY.md.
   - name: Documentation
-    url: https://princebilogocode.github.io/naabiga-os/
-    about: Guides, architecture, roadmap.
+    url: https://github.com/princebilogocode/naabiga-os/tree/main/docs
+    about: Guides, architecture, roadmap (dossier docs/, site MkDocs en artefact du workflow Docs).

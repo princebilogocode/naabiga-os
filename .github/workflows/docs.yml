@@ -1,4 +1,9 @@
-name: Docs (GitHub Pages)
+name: Docs
+
+# Le dépôt est privé : GitHub Pages n'est pas disponible sur ce plan.
+# La documentation est construite et publiée comme artefact (site.zip) à chaque changement,
+# téléchargeable depuis l'onglet Actions. Elle sera hébergée sur naabiga.com (voir issue #20).
+# Pour revenir à GitHub Pages (dépôt public ou plan Pro) : rétablir les étapes upload-pages-artifact + deploy-pages.
 
 on:
   push:
@@ -8,12 +13,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
   build:
@@ -26,16 +25,8 @@ jobs:
       - run: pip install mkdocs-material
       - run: cp branding/logo/naabiga-os-logo.png docs/assets/logo.png
       - run: mkdocs build --strict
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
+          name: documentation-site
           path: site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-24.04
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          retention-days: 30

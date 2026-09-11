@@ -5,6 +5,9 @@ Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) : Versionnage 
 
 ## [Unreleased]
 
+### Changed
+- Dépôt passé en privé : la documentation est publiée comme artefact du workflow Docs au lieu de GitHub Pages ; liens mis à jour.
+
 ## [1.0.0-alpha.2] - 2026-09-11
 
 ### Added
