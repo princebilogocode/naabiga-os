@@ -26,7 +26,7 @@ jobs:
       - run: pip install mkdocs-material
       - run: cp branding/logo/naabiga-os-logo.png docs/assets/logo.png
       - run: mkdocs build --strict
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
 
