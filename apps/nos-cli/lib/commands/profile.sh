@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos profile — profils d'usage : dev, bureautique, education, administration
+# nos profile, profils d'usage : dev, bureautique, education, administration
 # Un profil = outils du catalogue + paquets APT + script d'optimisation (scripts/profiles/<profil>.sh)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -33,7 +33,7 @@ profile_list() {
 profile_show() {
   local id="$1"
   profile_exists "$id" || nos_die "Profil inconnu : $id (nos profile list)"
-  nos_title "$(profile_get "$id" name) — $(profile_get "$id" description)"
+  nos_title "$(profile_get "$id" name) : $(profile_get "$id" description)"
   printf '%sOutils du catalogue :%s %s\n' "$C_BOLD" "$C_RESET" "$(profile_get "$id" tools)"
   printf '%sPaquets APT :%s %s\n' "$C_BOLD" "$C_RESET" "$(profile_get "$id" apt)"
   printf '%sFlatpak :%s %s\n' "$C_BOLD" "$C_RESET" "$(profile_get "$id" flatpak)"

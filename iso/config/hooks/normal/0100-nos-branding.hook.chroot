@@ -10,7 +10,7 @@ if [ -f /etc/os-release ]; then
   sed -i \
     -e "s/^PRETTY_NAME=.*/PRETTY_NAME=\"Naabiga OS ${NOS_VERSION} (Bobo)\"/" \
     -e "s/^NAME=.*/NAME=\"Naabiga OS\"/" \
-    -e "s|^HOME_URL=.*|HOME_URL=\"https://github.com/princebilogocode/naabiga-os\"|" \
+    -e "s|^HOME_URL=.*|HOME_URL=\"https://naabiga.com\"|" \
     -e "s|^SUPPORT_URL=.*|SUPPORT_URL=\"https://github.com/princebilogocode/naabiga-os/issues\"|" \
     -e "s|^BUG_REPORT_URL=.*|BUG_REPORT_URL=\"https://github.com/princebilogocode/naabiga-os/issues\"|" \
     /etc/os-release
@@ -29,12 +29,13 @@ Naabiga OS ${NOS_VERSION} \\n \\l
 EOF
 cat > /etc/motd <<'EOF'
 
-  Naabiga OS — Build Faster. Create Smarter.
+  Naabiga OS : Build Faster. Create Smarter.
   Le premier système d'exploitation burkinabè, pour le Burkina et l'Afrique.
   ICONEDOR × Université Aube Nouvelle (Bobo-Dioulasso)
 
   nos doctor   diagnostic de votre environnement de développement
   nos help     toutes les commandes
+  https://naabiga.com
 
 EOF
 
@@ -60,7 +61,7 @@ user-session=cinnamon
 greeter-session=slick-greeter
 EOF
 
-# Pas de Snap par défaut (Flatpak activé) — voir docs/architecture
+# Pas de Snap par défaut (Flatpak activé) : voir docs/architecture
 if dpkg -s snapd >/dev/null 2>&1; then
   apt-get purge -y snapd >/dev/null 2>&1 || true
 fi

@@ -1,7 +1,7 @@
-# Cahier des charges – Naabiga OS (NOS)
+# Cahier des charges - Naabiga OS (NOS)
 
 **Projet :** Naabiga OS (NOS)  
-**Entreprise :** ICONEDOR – Burkina Faso
+**Entreprise :** ICONEDOR - Burkina Faso
 
 ---
 
@@ -276,4 +276,4 @@ Faire de Naabiga OS la distribution Linux de référence pour les développeurs 
 
 **Devise**
 
-> "Naabiga OS — Build Faster. Create Smarter."
+> "Naabiga OS : Build Faster. Create Smarter."

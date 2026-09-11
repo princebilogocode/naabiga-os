@@ -13,17 +13,17 @@ check_node() {
   v="$(node --version 2>/dev/null | tr -d '\r')"
   major="${v#v}"; major="${major%%.*}"
   if ! nos_has npm; then
-    doctor_result warn "Node $v — npm absent" "nos sdk install node lts"
+    doctor_result warn "Node $v : npm absent" "nos sdk install node lts"
     return
   fi
   if [ "${major:-0}" -lt 20 ]; then
-    doctor_result warn "Node $v — version < 20 LTS" "nos sdk install node lts && nos sdk use node lts"
+    doctor_result warn "Node $v : version < 20 LTS" "nos sdk install node lts && nos sdk use node lts"
     return
   fi
   local npm_prefix
   npm_prefix="$(npm config get prefix 2>/dev/null | tr -d '\r' || true)"
   if nos_is_linux && [ "$npm_prefix" = "/usr" ] || [ "$npm_prefix" = "/usr/local" ]; then
-    doctor_result warn "Node $v, npm $(npm --version 2>/dev/null) — 'npm -g' nécessite sudo (prefix $npm_prefix)" "npm config set prefix ~/.nos/npm-global && ajouter ~/.nos/npm-global/bin au PATH"
+    doctor_result warn "Node $v, npm $(npm --version 2>/dev/null) : 'npm -g' nécessite sudo (prefix $npm_prefix)" "npm config set prefix ~/.nos/npm-global && ajouter ~/.nos/npm-global/bin au PATH"
     return
   fi
   doctor_result ok "Node $v, npm $(npm --version 2>/dev/null | tr -d '\r')"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Configuration live-build de l'ISO Naabiga OS
-# Socle : LTS « noble » — Bureau : Cinnamon — Installateur : Calamares
+# Socle : LTS « noble », Bureau : Cinnamon, Installateur : Calamares
 # Appelé par build/build-iso.sh (variables NOS_VERSION, NOS_ARCH, NOS_MIRROR)
 # SPDX-License-Identifier: GPL-3.0-or-later
 set -euo pipefail
@@ -44,7 +44,7 @@ lb config noauto \
   --apt-indices false \
   --cache-packages true \
   --iso-application "Naabiga OS" \
-  --iso-publisher "ICONEDOR — https://github.com/princebilogocode/naabiga-os" \
+  --iso-publisher "ICONEDOR : https://github.com/princebilogocode/naabiga-os" \
   --iso-preparer "Naabiga OS build system (live-build)" \
   --iso-volume "NAABIGA_OS_${NOS_VERSION}" \
   --image-name "live-image" \

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# nos — Naabiga OS command line interface
-# Copyright (C) 2026 ICONEDOR — Burkina Faso
+# nos : Naabiga OS command line interface
+# Copyright (C) 2026 ICONEDOR, Burkina Faso
 # Développé en collaboration avec les étudiants de l'Université Aube Nouvelle (Bobo-Dioulasso)
 # SPDX-License-Identifier: GPL-3.0-or-later
 set -euo pipefail

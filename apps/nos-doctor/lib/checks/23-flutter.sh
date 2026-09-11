@@ -15,11 +15,11 @@ check_flutter() {
   local flutter_root
   flutter_root="$(cd "$(dirname "$(command -v flutter)")/.." 2>/dev/null && pwd)"
   if [ -n "$flutter_root" ] && [ -d "$flutter_root/.git" ] && [ ! -w "$flutter_root" ]; then
-    doctor_result warn "$v — dossier Flutter non inscriptible ($flutter_root)" "sudo chown -R \$USER $flutter_root"
+    doctor_result warn "$v : dossier Flutter non inscriptible ($flutter_root)" "sudo chown -R \$USER $flutter_root"
     return
   fi
   if [ ! -f "$flutter_root/bin/cache/dart-sdk/bin/dart" ] 2>/dev/null; then
-    doctor_result warn "$v — cache Dart absent (premier lancement nécessaire)" "flutter precache"
+    doctor_result warn "$v : cache Dart absent (premier lancement nécessaire)" "flutter precache"
     return
   fi
   doctor_result ok "$v"

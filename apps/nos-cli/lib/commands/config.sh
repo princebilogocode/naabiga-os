@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos config — configuration de la CLI
+# nos config : configuration de la CLI
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 cmd_config() {

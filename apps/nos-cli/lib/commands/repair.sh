@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos repair — alias de nos doctor --repair
+# nos repair : alias de nos doctor --repair
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 cmd_repair() {

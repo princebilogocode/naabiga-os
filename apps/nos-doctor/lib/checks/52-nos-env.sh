@@ -23,7 +23,7 @@ check_nos_env() {
 
 repair_nos_env() {
   mkdir -p "$NOS_HOME"
-  [ -f "$NOS_ENV_FILE" ] || printf '# Généré par N-OS — variables d'\''environnement de développement\n' > "$NOS_ENV_FILE"
+  [ -f "$NOS_ENV_FILE" ] || printf '# Généré par N-OS : variables d'\''environnement de développement\n' > "$NOS_ENV_FILE"
   local rc
   for rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
     [ -f "$rc" ] && nos_ensure_line '[ -f "$HOME/.nos/env.sh" ] && . "$HOME/.nos/env.sh"' "$rc"

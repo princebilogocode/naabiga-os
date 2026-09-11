@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Vérification : bureautique (LibreOffice, français, impression) — pertinente pour les profils
+# Vérification : bureautique (LibreOffice, français, impression) : pertinente pour les profils
 # bureautique, education et administration ; simple information sinon.
 # SPDX-License-Identifier: GPL-3.0-or-later
 

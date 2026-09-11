@@ -2,7 +2,7 @@
   <rect width="760" height="380" rx="12" fill="#111111"/>
   <circle cx="20" cy="18" r="6" fill="#D62828"/><circle cx="40" cy="18" r="6" fill="#D4AF37"/><circle cx="60" cy="18" r="6" fill="#198754"/>
   <text x="20" y="52" fill="#F5F5F5">$ nos doctor</text>
-  <text x="20" y="80" fill="#FFFFFF" font-weight="bold">N-OS Doctor — Naabiga OS 1.0.0-alpha.1 (Bobo) — 2026-09-11 10:00</text>
+  <text x="20" y="80" fill="#FFFFFF" font-weight="bold">N-OS Doctor, Naabiga OS 1.0.0-alpha.2 (Bobo), 2026-09-11 10:00</text>
   <text x="20" y="108" fill="#D4AF37">Base</text>
   <text x="20" y="128" fill="#F5F5F5">  [<tspan fill="#198754">✔</tspan>] Git                    git 2.43.0 (Awa Ouédraogo &lt;awa@u-auben.bf&gt;)</text>
   <text x="20" y="156" fill="#D4AF37">Android &amp; Flutter</text>

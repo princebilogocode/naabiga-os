@@ -18,7 +18,7 @@ write_gradle_props() {
   install -d -o "$owner" -g "$owner" "$home/.gradle" 2>/dev/null || mkdir -p "$home/.gradle"
   if [ ! -f "$home/.gradle/gradle.properties" ]; then
     cat > "$home/.gradle/gradle.properties" <<'EOF'
-# Naabiga OS — réglages Gradle par défaut
+# Naabiga OS : réglages Gradle par défaut
 org.gradle.daemon=true
 org.gradle.parallel=true
 org.gradle.caching=true

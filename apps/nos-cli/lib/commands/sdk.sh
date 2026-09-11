@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos sdk — délègue à N-OS SDK Manager
+# nos sdk : délègue à N-OS SDK Manager
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 cmd_sdk() {

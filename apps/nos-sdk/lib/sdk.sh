@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# N-OS SDK Manager — plusieurs versions de Flutter, Java, Node.js et Android SDK
-# Copyright (C) 2026 ICONEDOR — Burkina Faso
+# N-OS SDK Manager : plusieurs versions de Flutter, Java, Node.js et Android SDK
+# Copyright (C) 2026 ICONEDOR, Burkina Faso
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Arborescence : ~/.nos/sdk/<sdk>/<version>/   +   ~/.nos/sdk/<sdk>/current -> <version>
@@ -177,7 +177,7 @@ sdk_write_env() {
   local tmp
   tmp="$(mktemp)"
   {
-    printf '# Généré par N-OS SDK Manager — ne pas éditer à la main (nos sdk use …)\n'
+    printf '# Généré par N-OS SDK Manager : ne pas éditer à la main (nos sdk use …)\n'
     printf '# %s\n' "$(date '+%Y-%m-%d %H:%M')"
     printf 'export NOS_SDK_DIR="%s"\n' "$NOS_SDK_DIR"
     printf 'export PATH="$HOME/.local/bin:$PATH"\n'
@@ -224,7 +224,7 @@ sdk_cmd_list() {
       any=1
       if [ "$v" = "$cur" ]; then printf '  * %s\n' "$v"; else printf '    %s\n' "$v"; fi
     done < <(sdk_installed_versions "$s")
-    [ "$any" = 0 ] && printf '    %s(aucune version — nos sdk install %s <version>)%s\n' "$C_DIM" "$s" "$C_RESET"
+    [ "$any" = 0 ] && printf '    %s(aucune version : nos sdk install %s <version>)%s\n' "$C_DIM" "$s" "$C_RESET"
   done
 }
 

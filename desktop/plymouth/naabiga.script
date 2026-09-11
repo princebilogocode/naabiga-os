@@ -1,4 +1,4 @@
-// Naabiga OS — thème Plymouth (script)
+// Naabiga OS : thème Plymouth (script)
 // Fond noir #111111, logo centré, barre de progression or → rouge
 
 Window.SetBackgroundTopColor(0.067, 0.067, 0.067);

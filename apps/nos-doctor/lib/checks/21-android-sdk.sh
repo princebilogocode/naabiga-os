@@ -24,15 +24,15 @@ check_android_sdk() {
   [ -d "$home/platforms" ] || missing+=("platforms")
   [ -d "$home/cmdline-tools" ] || missing+=("cmdline-tools")
   if [ "${#missing[@]}" -gt 0 ]; then
-    doctor_result warn "SDK dans $home — composants manquants : ${missing[*]}" "sdkmanager \"platform-tools\" \"build-tools;34.0.0\" \"platforms;android-34\""
+    doctor_result warn "SDK dans $home : composants manquants : ${missing[*]}" "sdkmanager \"platform-tools\" \"build-tools;34.0.0\" \"platforms;android-34\""
     return
   fi
   if [ -z "${ANDROID_HOME:-}" ]; then
-    doctor_result warn "SDK dans $home — ANDROID_HOME non défini" "nos sdk use android"
+    doctor_result warn "SDK dans $home : ANDROID_HOME non défini" "nos sdk use android"
     return
   fi
   if [ ! -f "$home/licenses/android-sdk-license" ]; then
-    doctor_result warn "SDK dans $home — licences non acceptées" "yes | sdkmanager --licenses"
+    doctor_result warn "SDK dans $home : licences non acceptées" "yes | sdkmanager --licenses"
     return
   fi
   doctor_result ok "ANDROID_HOME=$home"

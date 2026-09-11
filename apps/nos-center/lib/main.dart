@@ -1,5 +1,5 @@
-// N-OS Center — centre logiciel graphique de Naabiga OS
-// Copyright (C) 2026 ICONEDOR — Burkina Faso
+// N-OS Center : centre logiciel graphique de Naabiga OS
+// Copyright (C) 2026 ICONEDOR, Burkina Faso
 // SPDX-License-Identifier: GPL-3.0-or-later
 //
 // L'application est une interface au-dessus de la CLI `nos` :

@@ -36,7 +36,11 @@
 
 Le service `nos-first-boot` applique une seule fois : ZRAM, TRIM, optimisation SSD, démarrage rapide, Docker, Flutter, Android Studio (KVM, Gradle), locale, groupes, pare-feu UFW, Flathub. Journal : `/var/log/nos-first-boot.log`.
 
-## 4. Vérifier son environnement
+## 4. Assistant de bienvenue
+
+À la première ouverture de session, N-OS lance `nos welcome` : choix des profils (développement, bureautique, enseignement supérieur, administration), des IDE et des assistants IA, puis diagnostic. Rien n'est installé sans votre accord. Pour le relancer : `nos welcome --force`. En script ou en salle de TP : `nos welcome --yes --profile education --ide vscode --ai ollama`.
+
+## 5. Vérifier son environnement
 
 ```bash
 nos doctor
@@ -50,7 +54,7 @@ Tout est vert ? Vous pouvez développer. Sinon :
 nos doctor --repair
 ```
 
-## 5. Installer ce qui manque
+## 6. Installer ce qui manque
 
 ```bash
 nos install --list            # catalogue
@@ -60,7 +64,7 @@ nos sdk install java 21       # une autre version de Java
 nos sdk use java 21
 ```
 
-## 6. Raccourcis utiles
+## 7. Raccourcis utiles
 
 | Raccourci | Action |
 |---|---|
@@ -68,8 +72,9 @@ nos sdk use java 21
 | `Super+E` | Fichiers |
 | `Super+D` | N-OS Doctor |
 
-## 7. Obtenir de l'aide
+## 8. Obtenir de l'aide
 
 - `nos help`, `nos <commande> --help`
+- `nos update --check` pour savoir si une nouvelle version de N-OS est disponible
 - [Issues GitHub](https://github.com/princebilogocode/naabiga-os/issues)
 - Rapport à joindre à une demande d'aide : `nos doctor --export rapport.html`

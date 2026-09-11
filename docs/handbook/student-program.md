@@ -1,4 +1,4 @@
-# Programme étudiant — Université Aube Nouvelle (Bobo-Dioulasso)
+# Programme étudiant : Université Aube Nouvelle (Bobo-Dioulasso)
 
 Naabiga OS est développé par ICONEDOR **en collaboration avec les étudiants de l'U-AUBEN**. Ce programme transforme le projet en terrain d'apprentissage réel : Linux, packaging, CLI, CI/CD, QA, documentation, design.
 

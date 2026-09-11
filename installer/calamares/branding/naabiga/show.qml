@@ -1,4 +1,4 @@
-/* Naabiga OS — diaporama d'installation Calamares (slideshowAPI 2) */
+/* Naabiga OS : diaporama d'installation Calamares (slideshowAPI 2) */
 import QtQuick 2.0;
 import calamares.slideshow 1.0;
 
@@ -49,7 +49,7 @@ Presentation {
         Text {
             anchors.centerIn: parent; width: parent.width * 0.8; wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter; color: "#FFFFFF"; font.pixelSize: 22
-            text: "<b style='color:#D62828'>Un projet ouvert</b><br><br>Développé par <b>ICONEDOR</b> avec les étudiants de l'<b>Université Aube Nouvelle</b> de Bobo-Dioulasso.<br><br><span style='color:#BBBBBB'>github.com/princebilogocode/naabiga-os</span>"
+            text: "<b style='color:#D62828'>Un projet ouvert</b><br><br>Développé par <b>ICONEDOR</b> avec les étudiants de l'<b>Université Aube Nouvelle</b> de Bobo-Dioulasso.<br><br><span style='color:#BBBBBB'>naabiga.com · github.com/princebilogocode/naabiga-os</span>"
         }
     }
 }

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Bienvenue sur Naabiga OS
+Name[en]=Welcome to Naabiga OS
+Comment=Assistant de premier démarrage : profil, IDE, assistants IA
+Exec=sh -c 'test -f "$HOME/.nos/welcome.done" || gnome-terminal --title="Bienvenue sur Naabiga OS" -- bash -c "nos welcome; echo; read -r -p \"Appuyez sur Entrée pour fermer\""'
+Icon=naabiga-os
+Terminal=false
+Categories=System;
+X-GNOME-Autostart-enabled=true
+OnlyShowIn=X-Cinnamon;

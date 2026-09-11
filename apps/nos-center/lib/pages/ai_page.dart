@@ -1,4 +1,4 @@
-// Page IA — assistants (Claude Code, Gemini CLI, Ollama, Aider, OpenCode, Continue, Copilot)
+// Page IA : assistants (Claude Code, Gemini CLI, Ollama, Aider, OpenCode, Continue, Copilot)
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import 'package:flutter/material.dart';

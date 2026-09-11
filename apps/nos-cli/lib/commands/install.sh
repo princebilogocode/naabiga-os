@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nos install — installe des outils depuis le catalogue N-OS
+# nos install : installe des outils depuis le catalogue N-OS
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 install_list() {
@@ -45,7 +45,7 @@ install_one() {
   method="$(printf '%s' "$entry" | cut -f4)"
   spec="$(printf '%s' "$entry" | cut -f5)"
 
-  nos_title "Installation : $id — $desc"
+  nos_title "Installation : $id ($desc)"
   case "$method" in
     apt)
       # shellcheck disable=SC2086

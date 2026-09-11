@@ -3,7 +3,7 @@
 #   nos-cli       : CLI, Doctor, SDK Manager, AI Hub
 #   nos-branding  : logo, fonds d'écran, Plymouth, GRUB, /etc/nos-release
 #   nos-desktop   : réglages Cinnamon par défaut (dconf), thème
-#   nos-base      : métapaquet — dépendances de la plateforme de développement + scripts système
+#   nos-base      : métapaquet, dépendances de la plateforme de développement + scripts système
 # Usage : bash build/build-packages.sh        (sortie : build/out/packages/*.deb)
 #         OUT=/chemin bash build/build-packages.sh
 # SPDX-License-Identifier: GPL-3.0-or-later
@@ -70,12 +70,13 @@ build_pkg nos-branding
 
 # --- nos-desktop ------------------------------------------------------------------
 d="$WORK/nos-desktop"; render_control nos-desktop "$d"
-mkdir -p "$d/etc/dconf/db/local.d" "$d/etc/dconf/profile" "$d/usr/share/glib-2.0/schemas" "$d/etc/skel/.config" "$d/usr/share/applications" "$d/etc/lightdm/lightdm.conf.d" "$d/etc/lightdm/slick-greeter.conf.d"
+mkdir -p "$d/etc/dconf/db/local.d" "$d/etc/dconf/profile" "$d/usr/share/glib-2.0/schemas" "$d/etc/skel/.config" "$d/usr/share/applications" "$d/etc/xdg/autostart" "$d/etc/lightdm/lightdm.conf.d" "$d/etc/lightdm/slick-greeter.conf.d"
 cp "$ROOT/desktop/dconf/00-naabiga-defaults" "$d/etc/dconf/db/local.d/00-naabiga-defaults"
 cp "$ROOT/desktop/dconf/profile-user" "$d/etc/dconf/profile/user"
 cp "$ROOT/desktop/cinnamon/99-naabiga.conf" "$d/etc/lightdm/lightdm.conf.d/99-naabiga.conf"
 cp "$ROOT/desktop/cinnamon/99-naabiga-greeter.conf" "$d/etc/lightdm/slick-greeter.conf.d/99-naabiga.conf"
-cp "$ROOT"/desktop/cinnamon/*.desktop "$d/usr/share/applications/"
+cp "$ROOT"/desktop/cinnamon/nos-center.desktop "$ROOT"/desktop/cinnamon/nos-doctor.desktop "$d/usr/share/applications/"
+cp "$ROOT/desktop/cinnamon/nos-welcome.desktop" "$d/etc/xdg/autostart/"
 build_pkg nos-desktop
 
 # --- nos-base ----------------------------------------------------------------------
